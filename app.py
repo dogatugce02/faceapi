@@ -8,6 +8,20 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 import base64
 from cryptography.hazmat.primitives import padding
+import logging
+from logging.handlers import RotatingFileHandler
+
+
+log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+log_file = 'app.log'
+
+
+log_handler = RotatingFileHandler(log_file, maxBytes=1000000, backupCount=5)
+log_handler.setFormatter(log_formatter)
+
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+logger.addHandler(log_handler)
 
 
 def decrypt_aes(ciphertext):
@@ -38,8 +52,44 @@ def decrypt_aes(ciphertext):
         return None
 
 
+def connect_to_database(server, user, password, database):
+    try:
+        if not validate_ip(server):
+            logger.warning(f'Invalid IP address entered: {server}')
+            return None
 
-conn = pymssql.connect(
+        logger.info(f'Trying to connect to the database with IP: {server}')
+
+        conn = pymssql.connect(
+            server=server,
+            user=user,
+            password=password,
+            database=database,
+            as_dict=True
+        )
+
+        logger.info('Connection to the database was successful.')
+        return conn
+
+    except pymssql.OperationalError as e:
+        logger.error(f'OperationalError: Could not connect to the database. Error: {str(e)}', exc_info=True)
+    except Exception as e:
+        logger.error(f'An unexpected error occurred: {str(e)}', exc_info=True)
+
+    return None
+
+
+def validate_ip(ip_address):
+    # Basit bir IP doğrulama işlemi, daha gelişmiş bir doğrulama kullanılabilir
+    import re
+    pattern = r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$"
+    if re.match(pattern, ip_address):
+        return True
+    else:
+        return False
+
+
+conn = connect_to_database(
     server='94.73.170.9',
     user='USR160420145114',
     password='PSSJi26Py57',
@@ -108,13 +158,17 @@ def register():
         }
 
     except KeyError as e:
+        logger.error(f"Eksik anahtar:{str(e)}")
         return jsonify({"error": f"Eksik anahtar: {str(e)}"}), 400
 
     except ValueError as e:
+        logger.error(str(e))
+
         return jsonify({"error": str(e)}), 400
 
 
     except Exception as e:
+        logger.error(f"Genel hata:{str(e)}")
         return jsonify({"error": str(e)}, "type hatası yaptın dostum"), 500
 
     return jsonify(response)
@@ -181,8 +235,10 @@ def insert():
                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s)"""
 
 
-            cursor.execute(SQL_QUERY, (encrypted_name, encrypted_surname, encrypted_person_idnum, encrypted_birthday, encrypted_doc_num, encrypted_birthloc, encrypted_expiration_date,
-                                   encrypted_gender, encrypted_nation, encrypted_other_names, encrypted_noh, encrypted_pob, encrypted_address, encrypted_image, encrypted_cam_data,facematch_id))
+            cursor.execute(SQL_QUERY, (encrypted_name, encrypted_surname, encrypted_person_idnum,
+                                       encrypted_birthday, encrypted_doc_num, encrypted_birthloc, encrypted_expiration_date,
+                                   encrypted_gender, encrypted_nation, encrypted_other_names, encrypted_noh, encrypted_pob,
+                                       encrypted_address, encrypted_image, encrypted_cam_data,facematch_id))
             conn.commit()
 
             print("Record successfully inserted into the database.")
@@ -200,11 +256,13 @@ def insert():
         except Exception as e:
             # Hata durumunda işlemi geri al
             conn.rollback()
+            logger.error(f"Veritabanı hata: {str(e)}")
             raise e
 
 
 
         except Exception as e:
+            logger.error(f"Genel hata: {str(e)}")
             print(f"Bir hata oluştu: {str(e)}")
             return jsonify({"error": str(e)}), 500
 
@@ -213,6 +271,7 @@ def insert():
 
 
     except Exception as e:
+        logger.error(f"Genel hata: {str(e)}")
         print(f"Error occurred: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
@@ -235,16 +294,19 @@ def facematch(person_idnum, cam_data):
 
     if response.status_code == 500:
         # Sunucu hatası: Yanıt alırken sunucu tarafında bir sorun oluştu.
+        logger.error("Server error: The request could not be processed.")
         print("Server error: The request could not be processed due to an internal server error.")
         return {"error": "Server error: The request could not be processed."}, 500
 
     elif response.status_code == 401:
         # Yetkilendirme hatası: API'ye erişim için geçersiz veya eksik kimlik doğrulama bilgisi.
+        logger.error("Authorization error: Please check your authentication credentials.")
         print("Authorization error: Invalid or missing authentication credentials.")
         return {"error": "Authorization error: Please check your authentication credentials."}, 401
 
     elif response.status_code == 404:
         # Bulunamadı: İstenen kaynak bulunamadı.
+        logger.error("Not found: The requested resource could not be found.")
         print("Not found: The requested resource could not be found.")
         return {"error": "Not found: The requested resource could not be found."}, 404
 
@@ -264,6 +326,7 @@ def facematch(person_idnum, cam_data):
 
     else:
         # Diğer durumlar için genel bir hata mesajı
+        logger.error(f"Unexpected error: Status code {response.status_code}")
         print(f"Unexpected error: Status code {response.status_code}")
         return {"error": f"Unexpected error: Status code {response.status_code}"}, response.status_code
 
@@ -280,6 +343,7 @@ def read():
 
 
     except Exception as e:
+        logger.error(f"Veri okuma hata: {str(e)}")
         print(f"error occurred: {str(e)}")
         return jsonify({"error": f"Internal Server Error:{str(e)}"})
 
@@ -300,12 +364,14 @@ def get_user_info():
 
         # Eğer kullanıcı bulunamazsa
         if not user_data:
+            logger.warning(f"Kullanıcı bulunamadı: {person_idnum}")
             return jsonify({"error": "Kullanıcı bulunamadı"}), 404
 
         # Kullanıcı bilgilerini JSON formatında döndürme
         return jsonify(user_data)
 
     except Exception as e:
+        logger.error(f"Genel hata: {str(e)}")
         print(f"Error occurred: {str(e)}")
         return jsonify({"error": "Internal Server Error"}), 500
 
@@ -333,6 +399,7 @@ def update():
         new_facematch_id = request.form['facematch_id']
 
         if not new_person_id:
+            logger.warning("Güncellenecek alan belirtilmemiş")
             return jsonify({"error": "ID eksik"}), 400
 
         SQL_QUERY = """UPDATE Tablo SET """
@@ -411,6 +478,14 @@ def update():
         if not update_fields:
             return jsonify({"error": "Güncellenecek alan belirtilmemiş"}), 400
 
+        if new_cam_data:
+            update_fields.append("Cam_Data = %s")
+            update_values.append(new_cam_data)
+
+        if new_facematch_id:
+            update_fields.append("facematch_id = %s")
+            update_values.append(new_facematch_id)
+
         SQL_QUERY += ", ".join(update_fields)
         SQL_QUERY += " WHERE ID = %s"
 
@@ -423,6 +498,7 @@ def update():
 
 
     except Exception as e:
+        logger.error(f"Güncelleme hata: {str(e)}")
         print(f"Error occurred: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
@@ -434,6 +510,7 @@ def delete():
         delete_person_ID = request.form['ID']
 
         if not delete_person_ID:
+            logger.warning("ID eksik")
             return jsonify({"error": "ID eksik"}), 400
 
         SQL_QUERY = "DELETE FROM Tablo WHERE ID = %s"
@@ -445,6 +522,7 @@ def delete():
         return jsonify({"message": "silindi"})
 
     except Exception as e:
+        logger.error(f"Silme hata: {str(e)}")
         print(f"Error occurred: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
