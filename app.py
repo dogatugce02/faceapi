@@ -255,20 +255,20 @@ def insert():
 
             conn.commit()
 
-            #return jsonify({"message": "Kayıt başarıyla eklendi!"})
 
         except Exception as e:
             # Hata durumunda işlemi geri al
             conn.rollback()
             logger.error(f"Veritabanı hata: {str(e)}")
+            return jsonify({"error": f"Veritabanına eklenemedi: {str(e)}"}), 500
             raise e
 
 
 
         except Exception as e:
             logger.error(f"Genel hata: {str(e)}")
-            print(f"Bir hata oluştu: {str(e)}")
-            return jsonify({"error": str(e)}), 500
+            print(f"Bir hata oluştu,facematch api çalışmıyor olabilir.: {str(e)}")
+            return jsonify({"error,facematch api çalışmıyor olabilir": str(e)}), 500
 
         #return jsonify({"message": "Kayıt başarıyla eklendi!"})
         return facematch_response
@@ -327,36 +327,36 @@ def facematch(person_idnum, cam_data):
             # Sunucu hatası
             logger.error("Server error: The request could not be processed.")
             print("Server error: The request could not be processed due to an internal server error.")
-            return {"error": "Server error: The request could not be processed."}, 500
+            return jsonify({"error": "Server error: The request could not be processed."}) , 500
 
         elif response.status_code == 401:
             # Yetkilendirme hatası
             logger.error("Authorization error: Please check your authentication credentials.")
             print("Authorization error: Invalid or missing authentication credentials.")
-            return {"error": "Authorization error: Please check your authentication credentials."}, 401
+            return jsonify({"error": "Authorization error: Please check your authentication credentials."}), 401
 
         elif response.status_code == 404:
             # Bulunamadı
             logger.error("Not found: The requested resource could not be found.")
             print("Not found: The requested resource could not be found.")
-            return {"error": "Not found: The requested resource could not be found."}, 404
+            return jsonify({"error": "Not found: The requested resource could not be found."}), 404
 
         else:
             # Diğer durumlar için genel bir hata mesajı
             logger.error(f"Unexpected error: Status code {response.status_code}")
             print(f"Unexpected error: Status code {response.status_code}")
-            return {"error": f"Unexpected error: Status code {response.status_code}"}, response.status_code
+            return jsonify({"error": f"Unexpected error: Status code {response.status_code}"}) , response.status_code
 
     except requests.RequestException as req_err:
         # HTTP isteği hatalarını yakala
         logger.error(f"HTTP request error: {req_err}")
         print(f"HTTP request error: {req_err}")
-        return {"error": f"HTTP request error: {req_err}"}, 500
+        return jsonify({"error": f"HTTP request error: {req_err}"}), 500
     except Exception as err:
         # Beklenmedik diğer hataları yakala
         logger.error(f"Unexpected error: {err}")
         print(f"Unexpected error: {err}")
-        return {"error": f"Unexpected error: {err}"}, 500
+        return jsonify({"error": f"Unexpected error: {err}"}), 500
 
 
 
@@ -374,7 +374,7 @@ def read():
     except Exception as e:
         logger.error(f"Veri okuma hata: {str(e)}")
         print(f"error occurred: {str(e)}")
-        return jsonify({"error": f"Internal Server Error:{str(e)}"})
+        return jsonify({"error": f"Internal Server Error,Read Route çalışmıyor:{str(e)}"})
 
 @app.route('/get_user_info', methods=['POST'])
 def get_user_info():
@@ -402,7 +402,7 @@ def get_user_info():
     except Exception as e:
         logger.error(f"Genel hata: {str(e)}")
         print(f"Error occurred: {str(e)}")
-        return jsonify({"error": "Internal Server Error"}), 500
+        return jsonify({"error": "Internal Server Error,Kullanıcı bilgileri alınamıyor!"}), 500
 
 
 
@@ -529,7 +529,7 @@ def update():
     except Exception as e:
         logger.error(f"Güncelleme hata: {str(e)}")
         print(f"Error occurred: {str(e)}")
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error,Güncelleme hata!": str(e)}), 500
 
 
 @app.route('/delete', methods=['POST'])
@@ -553,50 +553,73 @@ def delete():
     except Exception as e:
         logger.error(f"Silme hata: {str(e)}")
         print(f"Error occurred: {str(e)}")
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error,Silme işlemi hata!": str(e)}), 500
 
 
 @app.route('/soap_request', methods=['POST'])
-def soup_request():
-    # İstekten verileri al
-    tc_no = request.form.get('TCKimlikNo')
-    ad = request.form.get('Ad')
-    soyad = request.form.get('Soyad')
-    dogum_yili = request.form.get('DogumYili')
+def soap_request():
+    try:
+        # İstekten verileri al
+        tc_no = request.form.get('TCKimlikNo')
+        ad = request.form.get('Ad')
+        soyad = request.form.get('Soyad')
+        dogum_yili = request.form.get('DogumYili')
 
-    # Web servisi URL'si
-    url = 'https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx'
+        # Eksik veri kontrolü
+        if not tc_no or not ad or not soyad or not dogum_yili:
+            raise ValueError("Tüm alanlar doldurulmalıdır: TCKimlikNo, Ad, Soyad, DogumYili.")
 
-    # SOAP isteği XML formatında
-    soap_request = f'''<?xml version="1.0" encoding="utf-8"?>
-    <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="http://tckimlik.nvi.gov.tr/WS">
-       <soap:Header/>
-       <soap:Body>
-          <ws:TCKimlikNoDogrula>
-             <ws:TCKimlikNo>{tc_no}</ws:TCKimlikNo>
-             <ws:Ad>{ad}</ws:Ad>
-             <ws:Soyad>{soyad}</ws:Soyad>
-             <ws:DogumYili>{dogum_yili}</ws:DogumYili>
-          </ws:TCKimlikNoDogrula>
-       </soap:Body>
-    </soap:Envelope>'''
+        # Web servisi URL'si
+        url = 'https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx'
 
-    # SOAP isteği gönderme
-    headers = {
-        'Content-Type': 'application/soap+xml; charset=utf-8',  # Content-Type başlığını SOAP 1.2'ye göre ayarlayın
-        'SOAPAction': 'http://tckimlik.nvi.gov.tr/WS/TCKimlikNoDogrula'
-        # SOAPAction, genellikle web servisi dokümantasyonunda bulunur
-    }
-    response = requests.post(url, data=soap_request, headers=headers)
+        # SOAP isteği XML formatında
+        soap_request = f'''<?xml version="1.0" encoding="utf-8"?>
+        <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="http://tckimlik.nvi.gov.tr/WS">
+           <soap:Header/>
+           <soap:Body>
+              <ws:TCKimlikNoDogrula>
+                 <ws:TCKimlikNo>{tc_no}</ws:TCKimlikNo>
+                 <ws:Ad>{ad}</ws:Ad>
+                 <ws:Soyad>{soyad}</ws:Soyad>
+                 <ws:DogumYili>{dogum_yili}</ws:DogumYili>
+              </ws:TCKimlikNoDogrula>
+           </soap:Body>
+        </soap:Envelope>'''
 
-    # Yanıtı kontrol etme
-    response_text = response.text
-    if 'TCKimlikNoDogrulaResult>true</TCKimlikNoDogrulaResult>' in response_text:
-        result = True
-    else:
-        result = False
+        # SOAP isteği gönderme
+        headers = {
+            'Content-Type': 'application/soap+xml; charset=utf-8',  # SOAP 1.2'ye göre Content-Type
+            'SOAPAction': 'http://tckimlik.nvi.gov.tr/WS/TCKimlikNoDogrula'  # SOAPAction, web servisi dokümantasyonunda belirtilir
+        }
 
-    return jsonify({'result': result})
+        response = requests.post(url, data=soap_request, headers=headers)
+
+        # HTTP isteği başarılı olmadıysa
+        if response.status_code != 200:
+            logger.error(f"SOAP isteği başarısız: {response.status_code} - {response.text}")
+            return jsonify({'error': f"SOAP isteği başarısız oldu. Status Code: {response.status_code}"}), 500
+
+        # Yanıtı kontrol etme
+        response_text = response.text
+        if 'TCKimlikNoDogrulaResult>true</TCKimlikNoDogrulaResult>' in response_text:
+            result = True
+        else:
+            result = False
+
+        return jsonify({'result': result})
+
+    except requests.exceptions.RequestException as e:
+        logger.error(f"SOAP isteği sırasında ağ hatası: {str(e)}", exc_info=True)
+        return jsonify({'error': "Ağ hatası meydana geldi. Lütfen daha sonra tekrar deneyin."}), 500
+
+    except ValueError as ve:
+        logger.error(f"Geçersiz giriş hatası: {str(ve)}", exc_info=True)
+        return jsonify({'error,Geçersiz giriş hatası': str(ve)}), 400
+
+    except Exception as e:
+        logger.error(f"Beklenmeyen bir hata oluştu: {str(e)}", exc_info=True)
+        return jsonify({'error': "SOAP REQUEST!Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin."}), 500
+
 
 
 '''if __name__ == '__main__':

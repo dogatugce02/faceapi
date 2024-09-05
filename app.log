@@ -907,3 +907,60 @@ TypeError: soup_request() missing 4 required positional arguments: 'tc_no', 'ad'
 2024-09-03 12:43:18,633 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 2024-09-03 12:43:18,633 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-05 10:06:38,314 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-05 10:06:38,890 - INFO - Connection to the database was successful.
+2024-09-05 10:06:38,904 - INFO - Serving on http://192.168.1.158:9099
+2024-09-05 10:07:00,055 - ERROR - Genel hata: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-09-05 10:07:05,919 - ERROR - Genel hata: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-09-05 10:10:30,329 - ERROR - Genel hata: Incorrect padding
+2024-09-05 10:28:30,652 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-05 10:28:37,989 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-05 10:28:37,997 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-05 10:28:38,004 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-05 10:29:06,782 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-05 10:29:08,137 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-05 10:29:08,139 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-05 10:29:08,140 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-05 10:29:31,826 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-05 10:29:33,197 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-05 10:29:33,200 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-05 10:29:33,201 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-05 10:29:46,445 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-05 10:29:47,873 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-05 10:29:53,455 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-05 10:29:55,000 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-05 10:29:55,002 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-05 10:29:55,004 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-05 10:32:56,089 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-05 10:32:58,840 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-05 10:35:00,672 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-05 10:35:03,462 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-05 10:35:03,487 - ERROR - Genel hata: Not connected to any MS SQL server
+2024-09-05 10:35:15,914 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-05 10:35:17,731 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-05 10:35:17,735 - ERROR - Genel hata: Not connected to any MS SQL server
+2024-09-05 10:37:03,977 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-05 10:37:06,545 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-05 10:37:06,547 - ERROR - Genel hata: Not connected to any MS SQL server
+2024-09-05 10:37:30,756 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-05 10:37:30,757 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-05 10:37:34,369 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-05 10:37:35,005 - INFO - Connection to the database was successful.
+2024-09-05 10:37:35,019 - INFO - Serving on http://192.168.1.158:9099
+2024-09-05 10:38:05,858 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-05 10:38:07,636 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-05 10:38:23,698 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-05 10:38:25,192 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-05 10:38:25,193 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-05 10:38:25,194 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-05 10:46:05,186 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-05 10:46:05,422 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 500 542
+2024-09-05 10:46:07,228 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-05 10:46:07,372 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 500 542
+2024-09-05 10:46:38,107 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-05 10:46:38,273 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 500 542
+2024-09-05 11:06:06,161 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-05 11:06:06,387 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 500 542
+2024-09-05 11:06:19,563 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-05 11:06:19,714 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 500 542
