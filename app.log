@@ -7,3 +7,903 @@
 2024-08-29 17:08:48,073 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 2024-08-29 17:08:48,075 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-02 06:14:39,997 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-02 06:14:40,551 - INFO - Connection to the database was successful.
+2024-09-02 06:14:40,567 - INFO - Serving on http://192.168.1.158:9099
+2024-09-02 06:15:37,635 - INFO - Trying to connect to the database with IP: 94.73.170.99
+2024-09-02 06:15:47,426 - INFO - Trying to connect to the database with IP: 94.73.170.99
+2024-09-02 06:16:08,529 - ERROR - OperationalError: Could not connect to the database. Error: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+Traceback (most recent call last):
+  File "src\\pymssql\\_pymssql.pyx", line 650, in pymssql._pymssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 2155, in pymssql._mssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 712, in pymssql._mssql.MSSQLConnection.__init__
+  File "src\\pymssql\\_mssql.pyx", line 1881, in pymssql._mssql.maybe_raise_MSSQLDatabaseException
+  File "src\\pymssql\\_mssql.pyx", line 1898, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\90551\Documents\GitHub\faceapi\app.py", line 63, in connect_to_database
+    conn = pymssql.connect(
+  File "src\\pymssql\\_pymssql.pyx", line 659, in pymssql._pymssql.connect
+pymssql.exceptions.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+2024-09-02 06:16:08,578 - INFO - Serving on http://192.168.1.158:9099
+2024-09-02 06:16:15,480 - ERROR - Veri okuma hata: 'NoneType' object has no attribute 'cursor'
+2024-09-02 06:17:05,987 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-02 06:17:05,988 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-02 06:17:08,734 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-02 06:17:09,293 - INFO - Connection to the database was successful.
+2024-09-02 06:17:09,307 - INFO - Serving on http://192.168.1.158:9099
+2024-09-02 10:12:05,953 - ERROR - Genel hata: (20047, b'DB-Lib error message 20047, severity 9:\nDBPROCESS is dead or not enabled\n')
+2024-09-02 10:20:46,021 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-02 10:20:46,023 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-02 10:20:51,200 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-02 10:20:51,663 - INFO - Connection to the database was successful.
+2024-09-02 10:20:51,679 - INFO - Serving on http://192.168.1.158:9099
+2024-09-02 10:27:14,423 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 10:27:22,029 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-02 10:27:22,030 - ERROR - Server error: The request could not be processed.
+2024-09-02 10:27:22,040 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-02 10:31:08,523 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 10:31:10,078 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-02 10:31:10,080 - ERROR - Server error: The request could not be processed.
+2024-09-02 10:31:10,081 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-02 10:34:30,758 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 10:34:32,832 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 10:35:21,156 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-02 10:35:21,156 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-02 10:35:30,911 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-02 10:35:31,417 - INFO - Connection to the database was successful.
+2024-09-02 10:35:31,431 - INFO - Serving on http://192.168.1.158:9099
+2024-09-02 10:35:34,872 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 10:35:36,117 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 10:36:07,067 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 10:36:08,271 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 10:59:44,038 - WARNING - Kullanýcý bulunamadý: K+HjrcWdOQ23L3UkyV6ULA==
+2024-09-02 11:23:06,470 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-02 11:23:06,470 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-02 11:23:12,815 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-02 11:23:13,396 - INFO - Connection to the database was successful.
+2024-09-02 11:23:13,408 - INFO - Serving on http://192.168.1.158:9099
+2024-09-02 11:23:49,789 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 11:23:52,654 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 11:42:58,596 - WARNING - Kullanýcý bulunamadý: n9qD/2ydEiGJx/KXowLYtA==
+2024-09-02 11:52:35,158 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 11:52:37,715 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 11:52:39,738 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 11:52:40,990 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 11:56:44,105 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 11:56:45,216 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 12:00:15,969 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 12:00:17,085 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 12:04:28,646 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 12:04:29,628 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 12:05:44,319 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 12:05:45,385 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 12:05:48,845 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-02 12:05:48,846 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-02 12:05:54,159 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-02 12:05:54,680 - INFO - Connection to the database was successful.
+2024-09-02 12:05:54,742 - INFO - Serving on http://192.168.1.158:9099
+2024-09-02 12:05:57,580 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 12:05:58,596 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 12:08:43,337 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 12:08:44,385 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 12:10:01,691 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-02 12:10:01,691 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-02 12:10:05,181 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-02 12:10:05,640 - INFO - Connection to the database was successful.
+2024-09-02 12:10:05,654 - INFO - Serving on http://192.168.1.158:9099
+2024-09-02 12:10:08,576 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 12:10:09,582 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 12:10:51,127 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-02 12:10:52,283 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-02 12:19:12,457 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-02 12:19:12,458 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 08:49:11,395 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 08:49:11,897 - INFO - Connection to the database was successful.
+2024-09-03 08:49:11,927 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 08:49:36,182 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 08:49:36,182 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 08:49:47,372 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 08:49:47,819 - INFO - Connection to the database was successful.
+2024-09-03 08:49:47,876 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 08:50:58,897 - DEBUG - Init schema document for None
+2024-09-03 08:50:58,899 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}string', <zeep.xsd.types.builtins.String object at 0x0000018488D55190>)
+2024-09-03 08:50:58,899 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}boolean', <zeep.xsd.types.builtins.Boolean object at 0x0000018488D55100>)
+2024-09-03 08:50:58,899 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}decimal', <zeep.xsd.types.builtins.Decimal object at 0x0000018488D55E20>)
+2024-09-03 08:50:58,899 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}float', <zeep.xsd.types.builtins.Float object at 0x0000018488D55D90>)
+2024-09-03 08:50:58,899 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}double', <zeep.xsd.types.builtins.Double object at 0x0000018488D55D00>)
+2024-09-03 08:50:58,899 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}duration', <zeep.xsd.types.builtins.Duration object at 0x0000018488D55C70>)
+2024-09-03 08:50:58,899 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}dateTime', <zeep.xsd.types.builtins.DateTime object at 0x0000018488D55820>)
+2024-09-03 08:50:58,907 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}time', <zeep.xsd.types.builtins.Time object at 0x0000018488D558B0>)
+2024-09-03 08:50:58,907 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}date', <zeep.xsd.types.builtins.Date object at 0x0000018488D55940>)
+2024-09-03 08:50:58,908 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYearMonth', <zeep.xsd.types.builtins.gYearMonth object at 0x0000018488D559D0>)
+2024-09-03 08:50:58,908 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYear', <zeep.xsd.types.builtins.gYear object at 0x0000018488D55A60>)
+2024-09-03 08:50:58,908 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonthDay', <zeep.xsd.types.builtins.gMonthDay object at 0x0000018488D55AF0>)
+2024-09-03 08:50:58,915 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gDay', <zeep.xsd.types.builtins.gDay object at 0x0000018488D55B80>)
+2024-09-03 08:50:58,915 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonth', <zeep.xsd.types.builtins.gMonth object at 0x0000018488D551F0>)
+2024-09-03 08:50:58,915 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}hexBinary', <zeep.xsd.types.builtins.HexBinary object at 0x0000018488D55280>)
+2024-09-03 08:50:58,915 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}base64Binary', <zeep.xsd.types.builtins.Base64Binary object at 0x0000018488D55310>)
+2024-09-03 08:50:58,915 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyURI', <zeep.xsd.types.builtins.AnyURI object at 0x0000018488BC81F0>)
+2024-09-03 08:50:58,915 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}QName', <zeep.xsd.types.builtins.QName object at 0x0000018488BC8100>)
+2024-09-03 08:50:58,924 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NOTATION', <zeep.xsd.types.builtins.Notation object at 0x0000018488CAC6D0>)
+2024-09-03 08:50:58,924 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}normalizedString', <zeep.xsd.types.builtins.NormalizedString object at 0x0000018488CAC4C0>)
+2024-09-03 08:50:58,924 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}token', <zeep.xsd.types.builtins.Token object at 0x0000018488CAC430>)
+2024-09-03 08:50:58,924 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}language', <zeep.xsd.types.builtins.Language object at 0x0000018488CAC3A0>)
+2024-09-03 08:50:58,924 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKEN', <zeep.xsd.types.builtins.NmToken object at 0x0000018488CACF70>)
+2024-09-03 08:50:58,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKENS', <zeep.xsd.types.builtins.NmTokens object at 0x0000018488CACE50>)
+2024-09-03 08:50:58,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}Name', <zeep.xsd.types.builtins.Name object at 0x0000018488CAC880>)
+2024-09-03 08:50:58,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NCName', <zeep.xsd.types.builtins.NCName object at 0x0000018488CAC1C0>)
+2024-09-03 08:50:58,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ID', <zeep.xsd.types.builtins.ID object at 0x0000018488CAC310>)
+2024-09-03 08:50:58,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREF', <zeep.xsd.types.builtins.IDREF object at 0x0000018488CAC5E0>)
+2024-09-03 08:50:58,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREFS', <zeep.xsd.types.builtins.IDREFS object at 0x0000018488C10D90>)
+2024-09-03 08:50:58,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITY', <zeep.xsd.types.builtins.Entity object at 0x0000018488C10D00>)
+2024-09-03 08:50:58,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITIES', <zeep.xsd.types.builtins.Entities object at 0x0000018488C10580>)
+2024-09-03 08:50:58,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}integer', <zeep.xsd.types.builtins.Integer object at 0x0000018488C10610>)
+2024-09-03 08:50:58,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonPositiveInteger', <zeep.xsd.types.builtins.NonPositiveInteger object at 0x0000018488C10BE0>)
+2024-09-03 08:50:58,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}negativeInteger', <zeep.xsd.types.builtins.NegativeInteger object at 0x0000018488C10AC0>)
+2024-09-03 08:50:58,948 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}long', <zeep.xsd.types.builtins.Long object at 0x0000018488C10850>)
+2024-09-03 08:50:58,948 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}int', <zeep.xsd.types.builtins.Int object at 0x0000018488C10700>)
+2024-09-03 08:50:58,948 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}short', <zeep.xsd.types.builtins.Short object at 0x0000018488C100D0>)
+2024-09-03 08:50:58,948 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}byte', <zeep.xsd.types.builtins.Byte object at 0x0000018488C10160>)
+2024-09-03 08:50:58,948 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonNegativeInteger', <zeep.xsd.types.builtins.NonNegativeInteger object at 0x0000018488C10310>)
+2024-09-03 08:50:58,956 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedByte', <zeep.xsd.types.builtins.UnsignedByte object at 0x0000018488C10250>)
+2024-09-03 08:50:58,956 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedInt', <zeep.xsd.types.builtins.UnsignedInt object at 0x0000018488C10400>)
+2024-09-03 08:50:58,956 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedLong', <zeep.xsd.types.builtins.UnsignedLong object at 0x0000018488C101C0>)
+2024-09-03 08:50:58,956 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedShort', <zeep.xsd.types.builtins.UnsignedShort object at 0x0000018488C10DF0>)
+2024-09-03 08:50:58,956 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}positiveInteger', <zeep.xsd.types.builtins.PositiveInteger object at 0x0000018488C10910>)
+2024-09-03 08:50:58,964 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyType', <zeep.xsd.types.any.AnyType object at 0x0000018488C100A0>)
+2024-09-03 08:50:58,964 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anySimpleType', <zeep.xsd.types.simple.AnySimpleType object at 0x0000018488C10040>)
+2024-09-03 08:50:58,964 - DEBUG - register_element('{http://www.w3.org/2001/XMLSchema}schema', <zeep.xsd.elements.builtins.Schema object at 0x0000018488C10820>)
+2024-09-03 08:50:58,964 - DEBUG - Add document with tns http://www.w3.org/2001/XMLSchema to schema 1668742995680
+2024-09-03 08:50:58,972 - DEBUG - Loading remote data from: http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 08:50:59,013 - DEBUG - Starting new HTTP connection (1): tckimlik.nvi.gov.tr:80
+2024-09-03 08:50:59,168 - DEBUG - http://tckimlik.nvi.gov.tr:80 "GET /Service/KPSPublic.asmx?wsdl HTTP/11" 302 None
+2024-09-03 08:50:59,184 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 08:50:59,615 - DEBUG - https://tckimlik.nvi.gov.tr:443 "GET / HTTP/11" 200 1638
+2024-09-03 08:50:59,639 - DEBUG - Creating definition for http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 08:51:23,923 - DEBUG - Init schema document for None
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}string', <zeep.xsd.types.builtins.String object at 0x0000018488BC9910>)
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}boolean', <zeep.xsd.types.builtins.Boolean object at 0x0000018488BC9400>)
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}decimal', <zeep.xsd.types.builtins.Decimal object at 0x0000018488BC9EE0>)
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}float', <zeep.xsd.types.builtins.Float object at 0x0000018488BC9BE0>)
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}double', <zeep.xsd.types.builtins.Double object at 0x0000018488BC9D00>)
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}duration', <zeep.xsd.types.builtins.Duration object at 0x0000018488BC9D90>)
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}dateTime', <zeep.xsd.types.builtins.DateTime object at 0x0000018488BC9790>)
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}time', <zeep.xsd.types.builtins.Time object at 0x0000018488BC9DF0>)
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}date', <zeep.xsd.types.builtins.Date object at 0x0000018488BC95B0>)
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYearMonth', <zeep.xsd.types.builtins.gYearMonth object at 0x0000018488BC9970>)
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYear', <zeep.xsd.types.builtins.gYear object at 0x0000018488BC91C0>)
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonthDay', <zeep.xsd.types.builtins.gMonthDay object at 0x0000018488BC9430>)
+2024-09-03 08:51:23,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gDay', <zeep.xsd.types.builtins.gDay object at 0x0000018488BC99D0>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonth', <zeep.xsd.types.builtins.gMonth object at 0x0000018488BC9580>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}hexBinary', <zeep.xsd.types.builtins.HexBinary object at 0x0000018488FD9130>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}base64Binary', <zeep.xsd.types.builtins.Base64Binary object at 0x0000018488FD90A0>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyURI', <zeep.xsd.types.builtins.AnyURI object at 0x0000018488FD9790>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}QName', <zeep.xsd.types.builtins.QName object at 0x0000018488FD9700>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NOTATION', <zeep.xsd.types.builtins.Notation object at 0x0000018488FD94C0>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}normalizedString', <zeep.xsd.types.builtins.NormalizedString object at 0x0000018488FD9670>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}token', <zeep.xsd.types.builtins.Token object at 0x0000018488FD95E0>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}language', <zeep.xsd.types.builtins.Language object at 0x0000018488FD9550>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKEN', <zeep.xsd.types.builtins.NmToken object at 0x0000018488FD93A0>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKENS', <zeep.xsd.types.builtins.NmTokens object at 0x0000018488FD9DF0>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}Name', <zeep.xsd.types.builtins.Name object at 0x0000018488FD91F0>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NCName', <zeep.xsd.types.builtins.NCName object at 0x0000018488FD9220>)
+2024-09-03 08:51:23,932 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ID', <zeep.xsd.types.builtins.ID object at 0x0000018488FD9190>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREF', <zeep.xsd.types.builtins.IDREF object at 0x0000018488FD9FA0>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREFS', <zeep.xsd.types.builtins.IDREFS object at 0x0000018488FD9940>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITY', <zeep.xsd.types.builtins.Entity object at 0x0000018488FD98B0>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITIES', <zeep.xsd.types.builtins.Entities object at 0x0000018488FD9820>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}integer', <zeep.xsd.types.builtins.Integer object at 0x0000018488FD9340>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonPositiveInteger', <zeep.xsd.types.builtins.NonPositiveInteger object at 0x0000018488FD92B0>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}negativeInteger', <zeep.xsd.types.builtins.NegativeInteger object at 0x0000018488FFF1F0>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}long', <zeep.xsd.types.builtins.Long object at 0x0000018488FFF040>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}int', <zeep.xsd.types.builtins.Int object at 0x0000018488FFF880>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}short', <zeep.xsd.types.builtins.Short object at 0x0000018488FFFA90>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}byte', <zeep.xsd.types.builtins.Byte object at 0x0000018488FFFB20>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonNegativeInteger', <zeep.xsd.types.builtins.NonNegativeInteger object at 0x0000018488FFFC70>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedByte', <zeep.xsd.types.builtins.UnsignedByte object at 0x0000018488FFFD60>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedInt', <zeep.xsd.types.builtins.UnsignedInt object at 0x0000018488FFFB80>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedLong', <zeep.xsd.types.builtins.UnsignedLong object at 0x0000018488FFF760>)
+2024-09-03 08:51:23,940 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedShort', <zeep.xsd.types.builtins.UnsignedShort object at 0x0000018488FFF730>)
+2024-09-03 08:51:23,948 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}positiveInteger', <zeep.xsd.types.builtins.PositiveInteger object at 0x0000018488FFF9A0>)
+2024-09-03 08:51:23,948 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyType', <zeep.xsd.types.any.AnyType object at 0x0000018488FFF9D0>)
+2024-09-03 08:51:23,948 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anySimpleType', <zeep.xsd.types.simple.AnySimpleType object at 0x0000018488FFFFA0>)
+2024-09-03 08:51:23,948 - DEBUG - register_element('{http://www.w3.org/2001/XMLSchema}schema', <zeep.xsd.elements.builtins.Schema object at 0x0000018488FFF6D0>)
+2024-09-03 08:51:23,948 - DEBUG - Add document with tns http://www.w3.org/2001/XMLSchema to schema 1668741371648
+2024-09-03 08:51:23,948 - DEBUG - Loading remote data from: http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 08:51:23,948 - DEBUG - Starting new HTTP connection (1): tckimlik.nvi.gov.tr:80
+2024-09-03 08:51:24,063 - DEBUG - http://tckimlik.nvi.gov.tr:80 "GET /Service/KPSPublic.asmx?wsdl HTTP/11" 302 None
+2024-09-03 08:51:24,080 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 08:51:24,292 - DEBUG - https://tckimlik.nvi.gov.tr:443 "GET / HTTP/11" 200 1638
+2024-09-03 08:51:24,300 - DEBUG - Creating definition for http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 08:53:16,060 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 08:53:22,705 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 08:53:22,707 - ERROR - Server error: The request could not be processed.
+2024-09-03 08:53:22,726 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 08:53:38,748 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 08:53:39,186 - INFO - Connection to the database was successful.
+2024-09-03 08:53:39,199 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 08:53:41,590 - DEBUG - Init schema document for None
+2024-09-03 08:53:41,590 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}string', <zeep.xsd.types.builtins.String object at 0x00000195019C7580>)
+2024-09-03 08:53:41,591 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}boolean', <zeep.xsd.types.builtins.Boolean object at 0x00000195019C7610>)
+2024-09-03 08:53:41,591 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}decimal', <zeep.xsd.types.builtins.Decimal object at 0x00000195019C76A0>)
+2024-09-03 08:53:41,592 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}float', <zeep.xsd.types.builtins.Float object at 0x00000195019C7730>)
+2024-09-03 08:53:41,593 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}double', <zeep.xsd.types.builtins.Double object at 0x00000195019C77C0>)
+2024-09-03 08:53:41,594 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}duration', <zeep.xsd.types.builtins.Duration object at 0x00000195019C7850>)
+2024-09-03 08:53:41,594 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}dateTime', <zeep.xsd.types.builtins.DateTime object at 0x00000195019C78E0>)
+2024-09-03 08:53:41,595 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}time', <zeep.xsd.types.builtins.Time object at 0x00000195019C7970>)
+2024-09-03 08:53:41,595 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}date', <zeep.xsd.types.builtins.Date object at 0x00000195019C7A00>)
+2024-09-03 08:53:41,595 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYearMonth', <zeep.xsd.types.builtins.gYearMonth object at 0x00000195019C7A90>)
+2024-09-03 08:53:41,596 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYear', <zeep.xsd.types.builtins.gYear object at 0x00000195019C7B20>)
+2024-09-03 08:53:41,596 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonthDay', <zeep.xsd.types.builtins.gMonthDay object at 0x00000195019C7BB0>)
+2024-09-03 08:53:41,596 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gDay', <zeep.xsd.types.builtins.gDay object at 0x00000195019C7C40>)
+2024-09-03 08:53:41,597 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonth', <zeep.xsd.types.builtins.gMonth object at 0x00000195019C7CD0>)
+2024-09-03 08:53:41,597 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}hexBinary', <zeep.xsd.types.builtins.HexBinary object at 0x00000195019C7D60>)
+2024-09-03 08:53:41,597 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}base64Binary', <zeep.xsd.types.builtins.Base64Binary object at 0x00000195019C7DF0>)
+2024-09-03 08:53:41,598 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyURI', <zeep.xsd.types.builtins.AnyURI object at 0x00000195019C7E80>)
+2024-09-03 08:53:41,598 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}QName', <zeep.xsd.types.builtins.QName object at 0x00000195019C7F10>)
+2024-09-03 08:53:41,598 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NOTATION', <zeep.xsd.types.builtins.Notation object at 0x00000195019C7FA0>)
+2024-09-03 08:53:41,599 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}normalizedString', <zeep.xsd.types.builtins.NormalizedString object at 0x00000195019CE070>)
+2024-09-03 08:53:41,599 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}token', <zeep.xsd.types.builtins.Token object at 0x00000195019CE100>)
+2024-09-03 08:53:41,599 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}language', <zeep.xsd.types.builtins.Language object at 0x00000195019CE190>)
+2024-09-03 08:53:41,600 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKEN', <zeep.xsd.types.builtins.NmToken object at 0x00000195019CE220>)
+2024-09-03 08:53:41,600 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKENS', <zeep.xsd.types.builtins.NmTokens object at 0x00000195019CE2B0>)
+2024-09-03 08:53:41,600 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}Name', <zeep.xsd.types.builtins.Name object at 0x00000195019CE340>)
+2024-09-03 08:53:41,601 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NCName', <zeep.xsd.types.builtins.NCName object at 0x00000195019CE3D0>)
+2024-09-03 08:53:41,601 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ID', <zeep.xsd.types.builtins.ID object at 0x00000195019CE460>)
+2024-09-03 08:53:41,601 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREF', <zeep.xsd.types.builtins.IDREF object at 0x00000195019CE4F0>)
+2024-09-03 08:53:41,602 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREFS', <zeep.xsd.types.builtins.IDREFS object at 0x00000195019CE580>)
+2024-09-03 08:53:41,602 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITY', <zeep.xsd.types.builtins.Entity object at 0x00000195019CE610>)
+2024-09-03 08:53:41,602 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITIES', <zeep.xsd.types.builtins.Entities object at 0x00000195019CE6A0>)
+2024-09-03 08:53:41,603 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}integer', <zeep.xsd.types.builtins.Integer object at 0x00000195019CE730>)
+2024-09-03 08:53:41,603 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonPositiveInteger', <zeep.xsd.types.builtins.NonPositiveInteger object at 0x00000195019CE7C0>)
+2024-09-03 08:53:41,603 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}negativeInteger', <zeep.xsd.types.builtins.NegativeInteger object at 0x00000195019CE850>)
+2024-09-03 08:53:41,603 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}long', <zeep.xsd.types.builtins.Long object at 0x00000195019CE8E0>)
+2024-09-03 08:53:41,605 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}int', <zeep.xsd.types.builtins.Int object at 0x00000195019CE970>)
+2024-09-03 08:53:41,605 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}short', <zeep.xsd.types.builtins.Short object at 0x00000195019CEA00>)
+2024-09-03 08:53:41,605 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}byte', <zeep.xsd.types.builtins.Byte object at 0x00000195019CEA90>)
+2024-09-03 08:53:41,605 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonNegativeInteger', <zeep.xsd.types.builtins.NonNegativeInteger object at 0x00000195019CEB20>)
+2024-09-03 08:53:41,606 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedByte', <zeep.xsd.types.builtins.UnsignedByte object at 0x00000195019CEBB0>)
+2024-09-03 08:53:41,606 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedInt', <zeep.xsd.types.builtins.UnsignedInt object at 0x00000195019CEC40>)
+2024-09-03 08:53:41,606 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedLong', <zeep.xsd.types.builtins.UnsignedLong object at 0x00000195019CECD0>)
+2024-09-03 08:53:41,606 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedShort', <zeep.xsd.types.builtins.UnsignedShort object at 0x00000195019CED60>)
+2024-09-03 08:53:41,607 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}positiveInteger', <zeep.xsd.types.builtins.PositiveInteger object at 0x00000195019CEDF0>)
+2024-09-03 08:53:41,607 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyType', <zeep.xsd.types.any.AnyType object at 0x00000195019CEE80>)
+2024-09-03 08:53:41,607 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anySimpleType', <zeep.xsd.types.simple.AnySimpleType object at 0x00000195019CEEE0>)
+2024-09-03 08:53:41,607 - DEBUG - register_element('{http://www.w3.org/2001/XMLSchema}schema', <zeep.xsd.elements.builtins.Schema object at 0x00000195019CEF70>)
+2024-09-03 08:53:41,608 - DEBUG - Add document with tns http://www.w3.org/2001/XMLSchema to schema 1739488785600
+2024-09-03 08:53:41,608 - DEBUG - Loading remote data from: http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 08:53:41,616 - DEBUG - Starting new HTTP connection (1): tckimlik.nvi.gov.tr:80
+2024-09-03 08:53:41,796 - DEBUG - http://tckimlik.nvi.gov.tr:80 "GET /Service/KPSPublic.asmx?wsdl HTTP/11" 302 None
+2024-09-03 08:53:41,799 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 08:53:41,958 - DEBUG - https://tckimlik.nvi.gov.tr:443 "GET / HTTP/11" 200 1638
+2024-09-03 08:53:41,962 - DEBUG - Creating definition for http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 08:53:43,905 - DEBUG - Init schema document for None
+2024-09-03 08:53:43,906 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}string', <zeep.xsd.types.builtins.String object at 0x0000019501A4DF10>)
+2024-09-03 08:53:43,906 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}boolean', <zeep.xsd.types.builtins.Boolean object at 0x0000019501A4DFA0>)
+2024-09-03 08:53:43,907 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}decimal', <zeep.xsd.types.builtins.Decimal object at 0x0000019501A6A070>)
+2024-09-03 08:53:43,907 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}float', <zeep.xsd.types.builtins.Float object at 0x0000019501A6A100>)
+2024-09-03 08:53:43,907 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}double', <zeep.xsd.types.builtins.Double object at 0x0000019501A6A190>)
+2024-09-03 08:53:43,907 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}duration', <zeep.xsd.types.builtins.Duration object at 0x0000019501A6A220>)
+2024-09-03 08:53:43,907 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}dateTime', <zeep.xsd.types.builtins.DateTime object at 0x0000019501A6A2B0>)
+2024-09-03 08:53:43,909 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}time', <zeep.xsd.types.builtins.Time object at 0x0000019501A6A340>)
+2024-09-03 08:53:43,909 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}date', <zeep.xsd.types.builtins.Date object at 0x0000019501A6A3D0>)
+2024-09-03 08:53:43,909 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYearMonth', <zeep.xsd.types.builtins.gYearMonth object at 0x0000019501A6A460>)
+2024-09-03 08:53:43,910 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYear', <zeep.xsd.types.builtins.gYear object at 0x0000019501A6A4F0>)
+2024-09-03 08:53:43,910 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonthDay', <zeep.xsd.types.builtins.gMonthDay object at 0x0000019501A6A580>)
+2024-09-03 08:53:43,910 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gDay', <zeep.xsd.types.builtins.gDay object at 0x0000019501A6A610>)
+2024-09-03 08:53:43,910 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonth', <zeep.xsd.types.builtins.gMonth object at 0x0000019501A6A6A0>)
+2024-09-03 08:53:43,911 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}hexBinary', <zeep.xsd.types.builtins.HexBinary object at 0x0000019501A6A730>)
+2024-09-03 08:53:43,911 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}base64Binary', <zeep.xsd.types.builtins.Base64Binary object at 0x0000019501A6A7C0>)
+2024-09-03 08:53:43,911 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyURI', <zeep.xsd.types.builtins.AnyURI object at 0x0000019501A6A850>)
+2024-09-03 08:53:43,911 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}QName', <zeep.xsd.types.builtins.QName object at 0x0000019501A6A8E0>)
+2024-09-03 08:53:43,912 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NOTATION', <zeep.xsd.types.builtins.Notation object at 0x0000019501A6A970>)
+2024-09-03 08:53:43,912 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}normalizedString', <zeep.xsd.types.builtins.NormalizedString object at 0x0000019501A6AA00>)
+2024-09-03 08:53:43,912 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}token', <zeep.xsd.types.builtins.Token object at 0x0000019501A6AA90>)
+2024-09-03 08:53:43,912 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}language', <zeep.xsd.types.builtins.Language object at 0x0000019501A6AB20>)
+2024-09-03 08:53:43,914 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKEN', <zeep.xsd.types.builtins.NmToken object at 0x0000019501A6ABB0>)
+2024-09-03 08:53:43,914 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKENS', <zeep.xsd.types.builtins.NmTokens object at 0x0000019501A6AC40>)
+2024-09-03 08:53:43,914 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}Name', <zeep.xsd.types.builtins.Name object at 0x0000019501A6ACD0>)
+2024-09-03 08:53:43,915 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NCName', <zeep.xsd.types.builtins.NCName object at 0x0000019501A6AD60>)
+2024-09-03 08:53:43,915 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ID', <zeep.xsd.types.builtins.ID object at 0x0000019501A6ADF0>)
+2024-09-03 08:53:43,915 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREF', <zeep.xsd.types.builtins.IDREF object at 0x0000019501A6AE80>)
+2024-09-03 08:53:43,915 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREFS', <zeep.xsd.types.builtins.IDREFS object at 0x0000019501A6AF10>)
+2024-09-03 08:53:43,916 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITY', <zeep.xsd.types.builtins.Entity object at 0x0000019501A6AFA0>)
+2024-09-03 08:53:43,916 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITIES', <zeep.xsd.types.builtins.Entities object at 0x0000019501A6E070>)
+2024-09-03 08:53:43,916 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}integer', <zeep.xsd.types.builtins.Integer object at 0x0000019501A6E100>)
+2024-09-03 08:53:43,916 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonPositiveInteger', <zeep.xsd.types.builtins.NonPositiveInteger object at 0x0000019501A6E190>)
+2024-09-03 08:53:43,917 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}negativeInteger', <zeep.xsd.types.builtins.NegativeInteger object at 0x0000019501A6E220>)
+2024-09-03 08:53:43,917 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}long', <zeep.xsd.types.builtins.Long object at 0x0000019501A6E2B0>)
+2024-09-03 08:53:43,917 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}int', <zeep.xsd.types.builtins.Int object at 0x0000019501A6E340>)
+2024-09-03 08:53:43,917 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}short', <zeep.xsd.types.builtins.Short object at 0x0000019501A6E3D0>)
+2024-09-03 08:53:43,919 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}byte', <zeep.xsd.types.builtins.Byte object at 0x0000019501A6E460>)
+2024-09-03 08:53:43,919 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonNegativeInteger', <zeep.xsd.types.builtins.NonNegativeInteger object at 0x0000019501A6E4F0>)
+2024-09-03 08:53:43,920 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedByte', <zeep.xsd.types.builtins.UnsignedByte object at 0x0000019501A6E580>)
+2024-09-03 08:53:43,921 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedInt', <zeep.xsd.types.builtins.UnsignedInt object at 0x0000019501A6E610>)
+2024-09-03 08:53:43,921 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedLong', <zeep.xsd.types.builtins.UnsignedLong object at 0x0000019501A6E6A0>)
+2024-09-03 08:53:43,921 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedShort', <zeep.xsd.types.builtins.UnsignedShort object at 0x0000019501A6E730>)
+2024-09-03 08:53:43,922 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}positiveInteger', <zeep.xsd.types.builtins.PositiveInteger object at 0x0000019501A6E7C0>)
+2024-09-03 08:53:43,922 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyType', <zeep.xsd.types.any.AnyType object at 0x0000019501A6E850>)
+2024-09-03 08:53:43,923 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anySimpleType', <zeep.xsd.types.simple.AnySimpleType object at 0x0000019501A6E8B0>)
+2024-09-03 08:53:43,923 - DEBUG - register_element('{http://www.w3.org/2001/XMLSchema}schema', <zeep.xsd.elements.builtins.Schema object at 0x0000019501A6E940>)
+2024-09-03 08:53:43,924 - DEBUG - Add document with tns http://www.w3.org/2001/XMLSchema to schema 1739489336912
+2024-09-03 08:53:43,924 - DEBUG - Loading remote data from: http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 08:53:43,926 - DEBUG - Starting new HTTP connection (1): tckimlik.nvi.gov.tr:80
+2024-09-03 08:53:44,015 - DEBUG - http://tckimlik.nvi.gov.tr:80 "GET /Service/KPSPublic.asmx?wsdl HTTP/11" 302 None
+2024-09-03 08:53:44,018 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 08:53:44,149 - DEBUG - https://tckimlik.nvi.gov.tr:443 "GET / HTTP/11" 200 1638
+2024-09-03 08:53:44,152 - DEBUG - Creating definition for http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 08:53:56,299 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 08:53:56,299 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 08:54:44,486 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 08:54:44,926 - INFO - Connection to the database was successful.
+2024-09-03 08:54:44,957 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 08:54:51,429 - DEBUG - Init schema document for None
+2024-09-03 08:54:51,430 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}string', <zeep.xsd.types.builtins.String object at 0x00000164B5279910>)
+2024-09-03 08:54:51,430 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}boolean', <zeep.xsd.types.builtins.Boolean object at 0x00000164B52AA1F0>)
+2024-09-03 08:54:51,431 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}decimal', <zeep.xsd.types.builtins.Decimal object at 0x00000164B52AA2B0>)
+2024-09-03 08:54:51,431 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}float', <zeep.xsd.types.builtins.Float object at 0x00000164B52AA340>)
+2024-09-03 08:54:51,431 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}double', <zeep.xsd.types.builtins.Double object at 0x00000164B52AA3D0>)
+2024-09-03 08:54:51,431 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}duration', <zeep.xsd.types.builtins.Duration object at 0x00000164B52AA460>)
+2024-09-03 08:54:51,431 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}dateTime', <zeep.xsd.types.builtins.DateTime object at 0x00000164B52AA4F0>)
+2024-09-03 08:54:51,431 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}time', <zeep.xsd.types.builtins.Time object at 0x00000164B52AA580>)
+2024-09-03 08:54:51,431 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}date', <zeep.xsd.types.builtins.Date object at 0x00000164B52AA610>)
+2024-09-03 08:54:51,431 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYearMonth', <zeep.xsd.types.builtins.gYearMonth object at 0x00000164B52AA6A0>)
+2024-09-03 08:54:51,431 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYear', <zeep.xsd.types.builtins.gYear object at 0x00000164B52AA730>)
+2024-09-03 08:54:51,435 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonthDay', <zeep.xsd.types.builtins.gMonthDay object at 0x00000164B52AA7C0>)
+2024-09-03 08:54:51,435 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gDay', <zeep.xsd.types.builtins.gDay object at 0x00000164B52AA850>)
+2024-09-03 08:54:51,437 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonth', <zeep.xsd.types.builtins.gMonth object at 0x00000164B52AA8E0>)
+2024-09-03 08:54:51,438 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}hexBinary', <zeep.xsd.types.builtins.HexBinary object at 0x00000164B52AA970>)
+2024-09-03 08:54:51,438 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}base64Binary', <zeep.xsd.types.builtins.Base64Binary object at 0x00000164B52AAA00>)
+2024-09-03 08:54:51,438 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyURI', <zeep.xsd.types.builtins.AnyURI object at 0x00000164B52AAA90>)
+2024-09-03 08:54:51,439 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}QName', <zeep.xsd.types.builtins.QName object at 0x00000164B52AAB20>)
+2024-09-03 08:54:51,439 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NOTATION', <zeep.xsd.types.builtins.Notation object at 0x00000164B52AABB0>)
+2024-09-03 08:54:51,439 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}normalizedString', <zeep.xsd.types.builtins.NormalizedString object at 0x00000164B52AAC40>)
+2024-09-03 08:54:51,443 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}token', <zeep.xsd.types.builtins.Token object at 0x00000164B52AACD0>)
+2024-09-03 08:54:51,443 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}language', <zeep.xsd.types.builtins.Language object at 0x00000164B52AAD60>)
+2024-09-03 08:54:51,444 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKEN', <zeep.xsd.types.builtins.NmToken object at 0x00000164B52AADF0>)
+2024-09-03 08:54:51,445 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKENS', <zeep.xsd.types.builtins.NmTokens object at 0x00000164B52AAE80>)
+2024-09-03 08:54:51,446 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}Name', <zeep.xsd.types.builtins.Name object at 0x00000164B52AAF10>)
+2024-09-03 08:54:51,446 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NCName', <zeep.xsd.types.builtins.NCName object at 0x00000164B52AAFA0>)
+2024-09-03 08:54:51,447 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ID', <zeep.xsd.types.builtins.ID object at 0x00000164B52B1070>)
+2024-09-03 08:54:51,447 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREF', <zeep.xsd.types.builtins.IDREF object at 0x00000164B52B1100>)
+2024-09-03 08:54:51,449 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREFS', <zeep.xsd.types.builtins.IDREFS object at 0x00000164B52B1190>)
+2024-09-03 08:54:51,449 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITY', <zeep.xsd.types.builtins.Entity object at 0x00000164B52B1220>)
+2024-09-03 08:54:51,450 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITIES', <zeep.xsd.types.builtins.Entities object at 0x00000164B52B12B0>)
+2024-09-03 08:54:51,450 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}integer', <zeep.xsd.types.builtins.Integer object at 0x00000164B52B1340>)
+2024-09-03 08:54:51,452 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonPositiveInteger', <zeep.xsd.types.builtins.NonPositiveInteger object at 0x00000164B52B13D0>)
+2024-09-03 08:54:51,452 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}negativeInteger', <zeep.xsd.types.builtins.NegativeInteger object at 0x00000164B52B1460>)
+2024-09-03 08:54:51,453 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}long', <zeep.xsd.types.builtins.Long object at 0x00000164B52B14F0>)
+2024-09-03 08:54:51,453 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}int', <zeep.xsd.types.builtins.Int object at 0x00000164B52B1580>)
+2024-09-03 08:54:51,454 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}short', <zeep.xsd.types.builtins.Short object at 0x00000164B52B1610>)
+2024-09-03 08:54:51,454 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}byte', <zeep.xsd.types.builtins.Byte object at 0x00000164B52B16A0>)
+2024-09-03 08:54:51,455 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonNegativeInteger', <zeep.xsd.types.builtins.NonNegativeInteger object at 0x00000164B52B1730>)
+2024-09-03 08:54:51,455 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedByte', <zeep.xsd.types.builtins.UnsignedByte object at 0x00000164B52B17C0>)
+2024-09-03 08:54:51,455 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedInt', <zeep.xsd.types.builtins.UnsignedInt object at 0x00000164B52B1850>)
+2024-09-03 08:54:51,457 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedLong', <zeep.xsd.types.builtins.UnsignedLong object at 0x00000164B52B18E0>)
+2024-09-03 08:54:51,457 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedShort', <zeep.xsd.types.builtins.UnsignedShort object at 0x00000164B52B1970>)
+2024-09-03 08:54:51,459 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}positiveInteger', <zeep.xsd.types.builtins.PositiveInteger object at 0x00000164B52B1A00>)
+2024-09-03 08:54:51,459 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyType', <zeep.xsd.types.any.AnyType object at 0x00000164B52B1A90>)
+2024-09-03 08:54:51,460 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anySimpleType', <zeep.xsd.types.simple.AnySimpleType object at 0x00000164B52B1AF0>)
+2024-09-03 08:54:51,460 - DEBUG - register_element('{http://www.w3.org/2001/XMLSchema}schema', <zeep.xsd.elements.builtins.Schema object at 0x00000164B52B1B80>)
+2024-09-03 08:54:51,461 - DEBUG - Add document with tns http://www.w3.org/2001/XMLSchema to schema 1532047827248
+2024-09-03 08:54:51,461 - DEBUG - Loading remote data from: http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 08:54:51,470 - DEBUG - Starting new HTTP connection (1): tckimlik.nvi.gov.tr:80
+2024-09-03 08:54:51,608 - DEBUG - http://tckimlik.nvi.gov.tr:80 "GET /Service/KPSPublic.asmx?wsdl HTTP/11" 302 None
+2024-09-03 08:54:51,615 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 08:54:51,778 - DEBUG - https://tckimlik.nvi.gov.tr:443 "GET / HTTP/11" 200 1638
+2024-09-03 08:54:51,789 - DEBUG - Creating definition for http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 08:58:57,864 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 08:58:58,671 - INFO - Connection to the database was successful.
+2024-09-03 08:58:58,746 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 08:59:10,020 - DEBUG - Init schema document for None
+2024-09-03 08:59:10,020 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}string', <zeep.xsd.types.builtins.String object at 0x000002211D03CDF0>)
+2024-09-03 08:59:10,020 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}boolean', <zeep.xsd.types.builtins.Boolean object at 0x000002211D1CF250>)
+2024-09-03 08:59:10,020 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}decimal', <zeep.xsd.types.builtins.Decimal object at 0x000002211D1CF2E0>)
+2024-09-03 08:59:10,020 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}float', <zeep.xsd.types.builtins.Float object at 0x000002211D1CF370>)
+2024-09-03 08:59:10,028 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}double', <zeep.xsd.types.builtins.Double object at 0x000002211D1CF400>)
+2024-09-03 08:59:10,028 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}duration', <zeep.xsd.types.builtins.Duration object at 0x000002211D1CF490>)
+2024-09-03 08:59:10,028 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}dateTime', <zeep.xsd.types.builtins.DateTime object at 0x000002211D1CF520>)
+2024-09-03 08:59:10,028 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}time', <zeep.xsd.types.builtins.Time object at 0x000002211D1CF5B0>)
+2024-09-03 08:59:10,028 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}date', <zeep.xsd.types.builtins.Date object at 0x000002211D1CF640>)
+2024-09-03 08:59:10,028 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYearMonth', <zeep.xsd.types.builtins.gYearMonth object at 0x000002211D1CF6D0>)
+2024-09-03 08:59:10,028 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYear', <zeep.xsd.types.builtins.gYear object at 0x000002211D1CF760>)
+2024-09-03 08:59:10,028 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonthDay', <zeep.xsd.types.builtins.gMonthDay object at 0x000002211D1CF7F0>)
+2024-09-03 08:59:10,028 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gDay', <zeep.xsd.types.builtins.gDay object at 0x000002211D1CF880>)
+2024-09-03 08:59:10,036 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonth', <zeep.xsd.types.builtins.gMonth object at 0x000002211D1CF910>)
+2024-09-03 08:59:10,036 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}hexBinary', <zeep.xsd.types.builtins.HexBinary object at 0x000002211D1CF9A0>)
+2024-09-03 08:59:10,036 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}base64Binary', <zeep.xsd.types.builtins.Base64Binary object at 0x000002211D1CFA30>)
+2024-09-03 08:59:10,036 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyURI', <zeep.xsd.types.builtins.AnyURI object at 0x000002211D1CFAC0>)
+2024-09-03 08:59:10,036 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}QName', <zeep.xsd.types.builtins.QName object at 0x000002211D1CFB50>)
+2024-09-03 08:59:10,036 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NOTATION', <zeep.xsd.types.builtins.Notation object at 0x000002211D1CFBE0>)
+2024-09-03 08:59:10,045 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}normalizedString', <zeep.xsd.types.builtins.NormalizedString object at 0x000002211D1CFC70>)
+2024-09-03 08:59:10,045 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}token', <zeep.xsd.types.builtins.Token object at 0x000002211D1CFD00>)
+2024-09-03 08:59:10,045 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}language', <zeep.xsd.types.builtins.Language object at 0x000002211D1CFD90>)
+2024-09-03 08:59:10,045 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKEN', <zeep.xsd.types.builtins.NmToken object at 0x000002211D1CFE20>)
+2024-09-03 08:59:10,045 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKENS', <zeep.xsd.types.builtins.NmTokens object at 0x000002211D1CFEB0>)
+2024-09-03 08:59:10,054 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}Name', <zeep.xsd.types.builtins.Name object at 0x000002211D1CFF40>)
+2024-09-03 08:59:10,054 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NCName', <zeep.xsd.types.builtins.NCName object at 0x000002211D1CFFD0>)
+2024-09-03 08:59:10,054 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ID', <zeep.xsd.types.builtins.ID object at 0x000002211D1D40A0>)
+2024-09-03 08:59:10,054 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREF', <zeep.xsd.types.builtins.IDREF object at 0x000002211D1D4130>)
+2024-09-03 08:59:10,054 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREFS', <zeep.xsd.types.builtins.IDREFS object at 0x000002211D1D41C0>)
+2024-09-03 08:59:10,061 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITY', <zeep.xsd.types.builtins.Entity object at 0x000002211D1D4250>)
+2024-09-03 08:59:10,061 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITIES', <zeep.xsd.types.builtins.Entities object at 0x000002211D1D42E0>)
+2024-09-03 08:59:10,061 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}integer', <zeep.xsd.types.builtins.Integer object at 0x000002211D1D4370>)
+2024-09-03 08:59:10,061 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonPositiveInteger', <zeep.xsd.types.builtins.NonPositiveInteger object at 0x000002211D1D4400>)
+2024-09-03 08:59:10,061 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}negativeInteger', <zeep.xsd.types.builtins.NegativeInteger object at 0x000002211D1D4490>)
+2024-09-03 08:59:10,069 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}long', <zeep.xsd.types.builtins.Long object at 0x000002211D1D4520>)
+2024-09-03 08:59:10,070 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}int', <zeep.xsd.types.builtins.Int object at 0x000002211D1D45B0>)
+2024-09-03 08:59:10,070 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}short', <zeep.xsd.types.builtins.Short object at 0x000002211D1D4640>)
+2024-09-03 08:59:10,070 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}byte', <zeep.xsd.types.builtins.Byte object at 0x000002211D1D46D0>)
+2024-09-03 08:59:10,070 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonNegativeInteger', <zeep.xsd.types.builtins.NonNegativeInteger object at 0x000002211D1D4760>)
+2024-09-03 08:59:10,077 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedByte', <zeep.xsd.types.builtins.UnsignedByte object at 0x000002211D1D47F0>)
+2024-09-03 08:59:10,077 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedInt', <zeep.xsd.types.builtins.UnsignedInt object at 0x000002211D1D4880>)
+2024-09-03 08:59:10,077 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedLong', <zeep.xsd.types.builtins.UnsignedLong object at 0x000002211D1D4910>)
+2024-09-03 08:59:10,077 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedShort', <zeep.xsd.types.builtins.UnsignedShort object at 0x000002211D1D49A0>)
+2024-09-03 08:59:10,077 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}positiveInteger', <zeep.xsd.types.builtins.PositiveInteger object at 0x000002211D1D4A30>)
+2024-09-03 08:59:10,077 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyType', <zeep.xsd.types.any.AnyType object at 0x000002211D1D4AC0>)
+2024-09-03 08:59:10,086 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anySimpleType', <zeep.xsd.types.simple.AnySimpleType object at 0x000002211D1D4B20>)
+2024-09-03 08:59:10,086 - DEBUG - register_element('{http://www.w3.org/2001/XMLSchema}schema', <zeep.xsd.elements.builtins.Schema object at 0x000002211D1D4BB0>)
+2024-09-03 08:59:10,086 - DEBUG - Add document with tns http://www.w3.org/2001/XMLSchema to schema 2341245612384
+2024-09-03 08:59:10,094 - DEBUG - Loading remote data from: http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 08:59:10,136 - DEBUG - Starting new HTTP connection (1): tckimlik.nvi.gov.tr:80
+2024-09-03 08:59:10,258 - DEBUG - http://tckimlik.nvi.gov.tr:80 "GET /Service/KPSPublic.asmx?wsdl HTTP/11" 302 None
+2024-09-03 08:59:10,274 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 08:59:10,530 - DEBUG - https://tckimlik.nvi.gov.tr:443 "GET / HTTP/11" 200 1638
+2024-09-03 08:59:10,549 - DEBUG - Creating definition for http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 09:04:09,014 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 09:04:09,514 - INFO - Connection to the database was successful.
+2024-09-03 09:04:09,523 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 09:04:18,099 - DEBUG - Init schema document for None
+2024-09-03 09:04:18,099 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}string', <zeep.xsd.types.builtins.String object at 0x0000024A766E75B0>)
+2024-09-03 09:04:18,100 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}boolean', <zeep.xsd.types.builtins.Boolean object at 0x0000024A766E7640>)
+2024-09-03 09:04:18,100 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}decimal', <zeep.xsd.types.builtins.Decimal object at 0x0000024A766E76D0>)
+2024-09-03 09:04:18,100 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}float', <zeep.xsd.types.builtins.Float object at 0x0000024A766E7760>)
+2024-09-03 09:04:18,102 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}double', <zeep.xsd.types.builtins.Double object at 0x0000024A766E77F0>)
+2024-09-03 09:04:18,102 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}duration', <zeep.xsd.types.builtins.Duration object at 0x0000024A766E7880>)
+2024-09-03 09:04:18,102 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}dateTime', <zeep.xsd.types.builtins.DateTime object at 0x0000024A766E7910>)
+2024-09-03 09:04:18,102 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}time', <zeep.xsd.types.builtins.Time object at 0x0000024A766E79A0>)
+2024-09-03 09:04:18,102 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}date', <zeep.xsd.types.builtins.Date object at 0x0000024A766E7A30>)
+2024-09-03 09:04:18,103 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYearMonth', <zeep.xsd.types.builtins.gYearMonth object at 0x0000024A766E7AC0>)
+2024-09-03 09:04:18,103 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYear', <zeep.xsd.types.builtins.gYear object at 0x0000024A766E7B50>)
+2024-09-03 09:04:18,103 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonthDay', <zeep.xsd.types.builtins.gMonthDay object at 0x0000024A766E7BE0>)
+2024-09-03 09:04:18,103 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gDay', <zeep.xsd.types.builtins.gDay object at 0x0000024A766E7C70>)
+2024-09-03 09:04:18,104 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonth', <zeep.xsd.types.builtins.gMonth object at 0x0000024A766E7D00>)
+2024-09-03 09:04:18,104 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}hexBinary', <zeep.xsd.types.builtins.HexBinary object at 0x0000024A766E7D90>)
+2024-09-03 09:04:18,104 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}base64Binary', <zeep.xsd.types.builtins.Base64Binary object at 0x0000024A766E7E20>)
+2024-09-03 09:04:18,104 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyURI', <zeep.xsd.types.builtins.AnyURI object at 0x0000024A766E7EB0>)
+2024-09-03 09:04:18,104 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}QName', <zeep.xsd.types.builtins.QName object at 0x0000024A766E7F40>)
+2024-09-03 09:04:18,106 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NOTATION', <zeep.xsd.types.builtins.Notation object at 0x0000024A766E7FD0>)
+2024-09-03 09:04:18,106 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}normalizedString', <zeep.xsd.types.builtins.NormalizedString object at 0x0000024A766EF0A0>)
+2024-09-03 09:04:18,106 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}token', <zeep.xsd.types.builtins.Token object at 0x0000024A766EF130>)
+2024-09-03 09:04:18,106 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}language', <zeep.xsd.types.builtins.Language object at 0x0000024A766EF1C0>)
+2024-09-03 09:04:18,106 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKEN', <zeep.xsd.types.builtins.NmToken object at 0x0000024A766EF250>)
+2024-09-03 09:04:18,107 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKENS', <zeep.xsd.types.builtins.NmTokens object at 0x0000024A766EF2E0>)
+2024-09-03 09:04:18,107 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}Name', <zeep.xsd.types.builtins.Name object at 0x0000024A766EF370>)
+2024-09-03 09:04:18,107 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NCName', <zeep.xsd.types.builtins.NCName object at 0x0000024A766EF400>)
+2024-09-03 09:04:18,107 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ID', <zeep.xsd.types.builtins.ID object at 0x0000024A766EF490>)
+2024-09-03 09:04:18,107 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREF', <zeep.xsd.types.builtins.IDREF object at 0x0000024A766EF520>)
+2024-09-03 09:04:18,109 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREFS', <zeep.xsd.types.builtins.IDREFS object at 0x0000024A766EF5B0>)
+2024-09-03 09:04:18,109 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITY', <zeep.xsd.types.builtins.Entity object at 0x0000024A766EF640>)
+2024-09-03 09:04:18,109 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITIES', <zeep.xsd.types.builtins.Entities object at 0x0000024A766EF6D0>)
+2024-09-03 09:04:18,109 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}integer', <zeep.xsd.types.builtins.Integer object at 0x0000024A766EF760>)
+2024-09-03 09:04:18,109 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonPositiveInteger', <zeep.xsd.types.builtins.NonPositiveInteger object at 0x0000024A766EF7F0>)
+2024-09-03 09:04:18,109 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}negativeInteger', <zeep.xsd.types.builtins.NegativeInteger object at 0x0000024A766EF880>)
+2024-09-03 09:04:18,110 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}long', <zeep.xsd.types.builtins.Long object at 0x0000024A766EF910>)
+2024-09-03 09:04:18,110 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}int', <zeep.xsd.types.builtins.Int object at 0x0000024A766EF9A0>)
+2024-09-03 09:04:18,110 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}short', <zeep.xsd.types.builtins.Short object at 0x0000024A766EFA30>)
+2024-09-03 09:04:18,110 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}byte', <zeep.xsd.types.builtins.Byte object at 0x0000024A766EFAC0>)
+2024-09-03 09:04:18,110 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonNegativeInteger', <zeep.xsd.types.builtins.NonNegativeInteger object at 0x0000024A766EFB50>)
+2024-09-03 09:04:18,112 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedByte', <zeep.xsd.types.builtins.UnsignedByte object at 0x0000024A766EFBE0>)
+2024-09-03 09:04:18,112 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedInt', <zeep.xsd.types.builtins.UnsignedInt object at 0x0000024A766EFC70>)
+2024-09-03 09:04:18,112 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedLong', <zeep.xsd.types.builtins.UnsignedLong object at 0x0000024A766EFD00>)
+2024-09-03 09:04:18,112 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedShort', <zeep.xsd.types.builtins.UnsignedShort object at 0x0000024A766EFD90>)
+2024-09-03 09:04:18,112 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}positiveInteger', <zeep.xsd.types.builtins.PositiveInteger object at 0x0000024A766EFE20>)
+2024-09-03 09:04:18,112 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyType', <zeep.xsd.types.any.AnyType object at 0x0000024A766EFEB0>)
+2024-09-03 09:04:18,113 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anySimpleType', <zeep.xsd.types.simple.AnySimpleType object at 0x0000024A766EFF10>)
+2024-09-03 09:04:18,113 - DEBUG - register_element('{http://www.w3.org/2001/XMLSchema}schema', <zeep.xsd.elements.builtins.Schema object at 0x0000024A766EFFA0>)
+2024-09-03 09:04:18,113 - DEBUG - Add document with tns http://www.w3.org/2001/XMLSchema to schema 2518837785840
+2024-09-03 09:04:18,113 - DEBUG - Loading remote data from: http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 09:04:18,121 - DEBUG - Starting new HTTP connection (1): tckimlik.nvi.gov.tr:80
+2024-09-03 09:04:18,931 - DEBUG - http://tckimlik.nvi.gov.tr:80 "GET /Service/KPSPublic.asmx?wsdl HTTP/11" 302 None
+2024-09-03 09:04:18,938 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 09:04:19,154 - DEBUG - https://tckimlik.nvi.gov.tr:443 "GET / HTTP/11" 200 1638
+2024-09-03 09:04:19,158 - DEBUG - Creating definition for http://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl
+2024-09-03 09:08:44,523 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 09:08:44,523 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 09:08:53,855 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 09:08:54,509 - INFO - Connection to the database was successful.
+2024-09-03 09:08:54,524 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 09:08:56,394 - DEBUG - Init schema document for None
+2024-09-03 09:08:56,395 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}string', <zeep.xsd.types.builtins.String object at 0x000002149F538520>)
+2024-09-03 09:08:56,396 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}boolean', <zeep.xsd.types.builtins.Boolean object at 0x000002149F5385B0>)
+2024-09-03 09:08:56,398 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}decimal', <zeep.xsd.types.builtins.Decimal object at 0x000002149F538640>)
+2024-09-03 09:08:56,399 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}float', <zeep.xsd.types.builtins.Float object at 0x000002149F5386D0>)
+2024-09-03 09:08:56,400 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}double', <zeep.xsd.types.builtins.Double object at 0x000002149F538760>)
+2024-09-03 09:08:56,400 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}duration', <zeep.xsd.types.builtins.Duration object at 0x000002149F5387F0>)
+2024-09-03 09:08:56,401 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}dateTime', <zeep.xsd.types.builtins.DateTime object at 0x000002149F538880>)
+2024-09-03 09:08:56,402 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}time', <zeep.xsd.types.builtins.Time object at 0x000002149F538910>)
+2024-09-03 09:08:56,403 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}date', <zeep.xsd.types.builtins.Date object at 0x000002149F5389A0>)
+2024-09-03 09:08:56,404 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYearMonth', <zeep.xsd.types.builtins.gYearMonth object at 0x000002149F538A30>)
+2024-09-03 09:08:56,406 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYear', <zeep.xsd.types.builtins.gYear object at 0x000002149F538AC0>)
+2024-09-03 09:08:56,407 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonthDay', <zeep.xsd.types.builtins.gMonthDay object at 0x000002149F538B50>)
+2024-09-03 09:08:56,407 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gDay', <zeep.xsd.types.builtins.gDay object at 0x000002149F538BE0>)
+2024-09-03 09:08:56,408 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonth', <zeep.xsd.types.builtins.gMonth object at 0x000002149F538C70>)
+2024-09-03 09:08:56,409 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}hexBinary', <zeep.xsd.types.builtins.HexBinary object at 0x000002149F538D00>)
+2024-09-03 09:08:56,410 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}base64Binary', <zeep.xsd.types.builtins.Base64Binary object at 0x000002149F538D90>)
+2024-09-03 09:08:56,410 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyURI', <zeep.xsd.types.builtins.AnyURI object at 0x000002149F538E20>)
+2024-09-03 09:08:56,411 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}QName', <zeep.xsd.types.builtins.QName object at 0x000002149F538EB0>)
+2024-09-03 09:08:56,412 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NOTATION', <zeep.xsd.types.builtins.Notation object at 0x000002149F538F40>)
+2024-09-03 09:08:56,412 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}normalizedString', <zeep.xsd.types.builtins.NormalizedString object at 0x000002149F538FD0>)
+2024-09-03 09:08:56,413 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}token', <zeep.xsd.types.builtins.Token object at 0x000002149F53F0A0>)
+2024-09-03 09:08:56,414 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}language', <zeep.xsd.types.builtins.Language object at 0x000002149F53F130>)
+2024-09-03 09:08:56,414 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKEN', <zeep.xsd.types.builtins.NmToken object at 0x000002149F53F1C0>)
+2024-09-03 09:08:56,415 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKENS', <zeep.xsd.types.builtins.NmTokens object at 0x000002149F53F250>)
+2024-09-03 09:08:56,415 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}Name', <zeep.xsd.types.builtins.Name object at 0x000002149F53F2E0>)
+2024-09-03 09:08:56,416 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NCName', <zeep.xsd.types.builtins.NCName object at 0x000002149F53F370>)
+2024-09-03 09:08:56,416 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ID', <zeep.xsd.types.builtins.ID object at 0x000002149F53F400>)
+2024-09-03 09:08:56,417 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREF', <zeep.xsd.types.builtins.IDREF object at 0x000002149F53F490>)
+2024-09-03 09:08:56,417 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREFS', <zeep.xsd.types.builtins.IDREFS object at 0x000002149F53F520>)
+2024-09-03 09:08:56,419 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITY', <zeep.xsd.types.builtins.Entity object at 0x000002149F53F5B0>)
+2024-09-03 09:08:56,419 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITIES', <zeep.xsd.types.builtins.Entities object at 0x000002149F53F640>)
+2024-09-03 09:08:56,420 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}integer', <zeep.xsd.types.builtins.Integer object at 0x000002149F53F6D0>)
+2024-09-03 09:08:56,420 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonPositiveInteger', <zeep.xsd.types.builtins.NonPositiveInteger object at 0x000002149F53F760>)
+2024-09-03 09:08:56,421 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}negativeInteger', <zeep.xsd.types.builtins.NegativeInteger object at 0x000002149F53F7F0>)
+2024-09-03 09:08:56,421 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}long', <zeep.xsd.types.builtins.Long object at 0x000002149F53F880>)
+2024-09-03 09:08:56,421 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}int', <zeep.xsd.types.builtins.Int object at 0x000002149F53F910>)
+2024-09-03 09:08:56,422 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}short', <zeep.xsd.types.builtins.Short object at 0x000002149F53F9A0>)
+2024-09-03 09:08:56,422 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}byte', <zeep.xsd.types.builtins.Byte object at 0x000002149F53FA30>)
+2024-09-03 09:08:56,423 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonNegativeInteger', <zeep.xsd.types.builtins.NonNegativeInteger object at 0x000002149F53FAC0>)
+2024-09-03 09:08:56,424 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedByte', <zeep.xsd.types.builtins.UnsignedByte object at 0x000002149F53FB50>)
+2024-09-03 09:08:56,424 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedInt', <zeep.xsd.types.builtins.UnsignedInt object at 0x000002149F53FBE0>)
+2024-09-03 09:08:56,425 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedLong', <zeep.xsd.types.builtins.UnsignedLong object at 0x000002149F53FC70>)
+2024-09-03 09:08:56,426 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedShort', <zeep.xsd.types.builtins.UnsignedShort object at 0x000002149F53FD00>)
+2024-09-03 09:08:56,427 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}positiveInteger', <zeep.xsd.types.builtins.PositiveInteger object at 0x000002149F53FD90>)
+2024-09-03 09:08:56,427 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyType', <zeep.xsd.types.any.AnyType object at 0x000002149F53FE20>)
+2024-09-03 09:08:56,428 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anySimpleType', <zeep.xsd.types.simple.AnySimpleType object at 0x000002149F53FE80>)
+2024-09-03 09:08:56,428 - DEBUG - register_element('{http://www.w3.org/2001/XMLSchema}schema', <zeep.xsd.elements.builtins.Schema object at 0x000002149F53FF10>)
+2024-09-03 09:08:56,429 - DEBUG - Add document with tns http://www.w3.org/2001/XMLSchema to schema 2287595652192
+2024-09-03 09:08:56,430 - DEBUG - Loading remote data from: https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx
+2024-09-03 09:08:56,438 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 09:08:56,701 - DEBUG - https://tckimlik.nvi.gov.tr:443 "GET /Service/KPSPublic.asmx HTTP/11" 200 1213
+2024-09-03 09:18:43,109 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 09:18:43,110 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 09:18:47,458 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 09:18:47,874 - INFO - Connection to the database was successful.
+2024-09-03 09:18:47,886 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 09:18:50,387 - DEBUG - Init schema document for None
+2024-09-03 09:18:50,388 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}string', <zeep.xsd.types.builtins.String object at 0x0000021333317580>)
+2024-09-03 09:18:50,388 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}boolean', <zeep.xsd.types.builtins.Boolean object at 0x0000021333317610>)
+2024-09-03 09:18:50,389 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}decimal', <zeep.xsd.types.builtins.Decimal object at 0x00000213333176A0>)
+2024-09-03 09:18:50,389 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}float', <zeep.xsd.types.builtins.Float object at 0x0000021333317730>)
+2024-09-03 09:18:50,389 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}double', <zeep.xsd.types.builtins.Double object at 0x00000213333177C0>)
+2024-09-03 09:18:50,389 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}duration', <zeep.xsd.types.builtins.Duration object at 0x0000021333317850>)
+2024-09-03 09:18:50,390 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}dateTime', <zeep.xsd.types.builtins.DateTime object at 0x00000213333178E0>)
+2024-09-03 09:18:50,390 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}time', <zeep.xsd.types.builtins.Time object at 0x0000021333317970>)
+2024-09-03 09:18:50,391 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}date', <zeep.xsd.types.builtins.Date object at 0x0000021333317A00>)
+2024-09-03 09:18:50,391 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYearMonth', <zeep.xsd.types.builtins.gYearMonth object at 0x0000021333317A90>)
+2024-09-03 09:18:50,391 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gYear', <zeep.xsd.types.builtins.gYear object at 0x0000021333317B20>)
+2024-09-03 09:18:50,391 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonthDay', <zeep.xsd.types.builtins.gMonthDay object at 0x0000021333317BB0>)
+2024-09-03 09:18:50,393 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gDay', <zeep.xsd.types.builtins.gDay object at 0x0000021333317C40>)
+2024-09-03 09:18:50,393 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}gMonth', <zeep.xsd.types.builtins.gMonth object at 0x0000021333317CD0>)
+2024-09-03 09:18:50,393 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}hexBinary', <zeep.xsd.types.builtins.HexBinary object at 0x0000021333317D60>)
+2024-09-03 09:18:50,394 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}base64Binary', <zeep.xsd.types.builtins.Base64Binary object at 0x0000021333317DF0>)
+2024-09-03 09:18:50,394 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyURI', <zeep.xsd.types.builtins.AnyURI object at 0x0000021333317E80>)
+2024-09-03 09:18:50,394 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}QName', <zeep.xsd.types.builtins.QName object at 0x0000021333317F10>)
+2024-09-03 09:18:50,394 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NOTATION', <zeep.xsd.types.builtins.Notation object at 0x0000021333317FA0>)
+2024-09-03 09:18:50,395 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}normalizedString', <zeep.xsd.types.builtins.NormalizedString object at 0x000002133331E070>)
+2024-09-03 09:18:50,395 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}token', <zeep.xsd.types.builtins.Token object at 0x000002133331E100>)
+2024-09-03 09:18:50,395 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}language', <zeep.xsd.types.builtins.Language object at 0x000002133331E190>)
+2024-09-03 09:18:50,397 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKEN', <zeep.xsd.types.builtins.NmToken object at 0x000002133331E220>)
+2024-09-03 09:18:50,397 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NMTOKENS', <zeep.xsd.types.builtins.NmTokens object at 0x000002133331E2B0>)
+2024-09-03 09:18:50,397 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}Name', <zeep.xsd.types.builtins.Name object at 0x000002133331E340>)
+2024-09-03 09:18:50,397 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}NCName', <zeep.xsd.types.builtins.NCName object at 0x000002133331E3D0>)
+2024-09-03 09:18:50,398 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ID', <zeep.xsd.types.builtins.ID object at 0x000002133331E460>)
+2024-09-03 09:18:50,398 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREF', <zeep.xsd.types.builtins.IDREF object at 0x000002133331E4F0>)
+2024-09-03 09:18:50,399 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}IDREFS', <zeep.xsd.types.builtins.IDREFS object at 0x000002133331E580>)
+2024-09-03 09:18:50,400 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITY', <zeep.xsd.types.builtins.Entity object at 0x000002133331E610>)
+2024-09-03 09:18:50,400 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}ENTITIES', <zeep.xsd.types.builtins.Entities object at 0x000002133331E6A0>)
+2024-09-03 09:18:50,401 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}integer', <zeep.xsd.types.builtins.Integer object at 0x000002133331E730>)
+2024-09-03 09:18:50,401 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonPositiveInteger', <zeep.xsd.types.builtins.NonPositiveInteger object at 0x000002133331E7C0>)
+2024-09-03 09:18:50,401 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}negativeInteger', <zeep.xsd.types.builtins.NegativeInteger object at 0x000002133331E850>)
+2024-09-03 09:18:50,402 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}long', <zeep.xsd.types.builtins.Long object at 0x000002133331E8E0>)
+2024-09-03 09:18:50,402 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}int', <zeep.xsd.types.builtins.Int object at 0x000002133331E970>)
+2024-09-03 09:18:50,402 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}short', <zeep.xsd.types.builtins.Short object at 0x000002133331EA00>)
+2024-09-03 09:18:50,403 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}byte', <zeep.xsd.types.builtins.Byte object at 0x000002133331EA90>)
+2024-09-03 09:18:50,403 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}nonNegativeInteger', <zeep.xsd.types.builtins.NonNegativeInteger object at 0x000002133331EB20>)
+2024-09-03 09:18:50,403 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedByte', <zeep.xsd.types.builtins.UnsignedByte object at 0x000002133331EBB0>)
+2024-09-03 09:18:50,403 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedInt', <zeep.xsd.types.builtins.UnsignedInt object at 0x000002133331EC40>)
+2024-09-03 09:18:50,403 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedLong', <zeep.xsd.types.builtins.UnsignedLong object at 0x000002133331ECD0>)
+2024-09-03 09:18:50,405 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}unsignedShort', <zeep.xsd.types.builtins.UnsignedShort object at 0x000002133331ED60>)
+2024-09-03 09:18:50,405 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}positiveInteger', <zeep.xsd.types.builtins.PositiveInteger object at 0x000002133331EDF0>)
+2024-09-03 09:18:50,405 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anyType', <zeep.xsd.types.any.AnyType object at 0x000002133331EE80>)
+2024-09-03 09:18:50,405 - DEBUG - register_type('{http://www.w3.org/2001/XMLSchema}anySimpleType', <zeep.xsd.types.simple.AnySimpleType object at 0x000002133331EEE0>)
+2024-09-03 09:18:50,405 - DEBUG - register_element('{http://www.w3.org/2001/XMLSchema}schema', <zeep.xsd.elements.builtins.Schema object at 0x000002133331EF70>)
+2024-09-03 09:18:50,406 - DEBUG - Add document with tns http://www.w3.org/2001/XMLSchema to schema 2281486513344
+2024-09-03 09:18:50,406 - DEBUG - Loading remote data from: https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx
+2024-09-03 09:18:50,417 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 09:18:50,636 - DEBUG - https://tckimlik.nvi.gov.tr:443 "GET /Service/KPSPublic.asmx HTTP/11" 200 1213
+2024-09-03 09:25:30,536 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 09:25:30,537 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 09:25:34,118 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 09:25:34,536 - INFO - Connection to the database was successful.
+2024-09-03 09:25:34,551 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 09:25:52,766 - ERROR - Exception on /soap_request [POST]
+Traceback (most recent call last):
+  File "C:\Users\90551\PycharmProjects\flaskProject\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\90551\PycharmProjects\flaskProject\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\90551\PycharmProjects\flaskProject\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\90551\PycharmProjects\flaskProject\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+TypeError: soup_request() missing 4 required positional arguments: 'tc_no', 'ad', 'soyad', and 'dogum_yili'
+2024-09-03 09:30:12,623 - ERROR - Exception on /soap_request [POST]
+Traceback (most recent call last):
+  File "C:\Users\90551\PycharmProjects\flaskProject\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\90551\PycharmProjects\flaskProject\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\90551\PycharmProjects\flaskProject\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\90551\PycharmProjects\flaskProject\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+TypeError: soup_request() missing 4 required positional arguments: 'tc_no', 'ad', 'soyad', and 'dogum_yili'
+2024-09-03 09:32:46,982 - ERROR - Exception on /soap_request [POST]
+Traceback (most recent call last):
+  File "C:\Users\90551\PycharmProjects\flaskProject\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\90551\PycharmProjects\flaskProject\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\90551\PycharmProjects\flaskProject\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\90551\PycharmProjects\flaskProject\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+TypeError: soup_request() missing 4 required positional arguments: 'tc_no', 'ad', 'soyad', and 'dogum_yili'
+2024-09-03 09:38:34,101 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 09:38:34,102 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 09:40:24,139 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 09:40:30,739 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 09:40:36,014 - INFO - Connection to the database was successful.
+2024-09-03 09:40:36,022 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 09:41:02,510 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 09:41:07,562 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 09:46:27,380 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 09:46:27,380 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 09:46:31,659 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 09:46:32,097 - INFO - Connection to the database was successful.
+2024-09-03 09:46:32,115 - INFO - Serving on http://192.168.1.158:8080
+2024-09-03 09:47:35,861 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 09:47:36,126 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 09:51:37,310 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 09:51:37,310 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 09:52:40,326 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 09:52:41,117 - INFO - Connection to the database was successful.
+2024-09-03 09:52:41,165 - INFO - Serving on http://192.168.1.158:8080
+2024-09-03 09:59:52,911 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 09:59:52,912 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 10:00:05,753 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 10:00:06,217 - INFO - Connection to the database was successful.
+2024-09-03 10:00:06,228 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 10:02:44,530 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 10:02:45,129 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 10:05:14,084 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 10:05:14,086 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 10:05:18,437 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 10:05:20,298 - INFO - Connection to the database was successful.
+2024-09-03 10:05:20,307 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 10:06:04,508 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:06:07,283 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:06:07,283 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:06:07,299 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:09:53,203 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 10:09:53,204 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 10:09:57,630 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 10:09:58,021 - INFO - Connection to the database was successful.
+2024-09-03 10:09:58,030 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 10:10:02,772 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:10:05,044 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:10:05,047 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:10:05,048 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:17:10,647 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 10:17:10,648 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 10:17:20,579 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 10:17:21,145 - INFO - Connection to the database was successful.
+2024-09-03 10:17:21,152 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 10:17:31,917 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:17:34,689 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:17:34,689 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:17:34,692 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:19:02,804 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:19:04,290 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:19:04,291 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:19:04,293 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:20:40,404 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:20:41,785 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:20:41,786 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:20:41,786 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:21:09,024 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 10:21:09,025 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 10:21:13,883 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 10:21:14,460 - INFO - Connection to the database was successful.
+2024-09-03 10:21:14,469 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 10:21:19,543 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:21:20,996 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:21:20,998 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:21:20,999 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:22:05,349 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 10:22:05,350 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 10:22:25,414 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 10:22:25,896 - INFO - Connection to the database was successful.
+2024-09-03 10:22:25,920 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 10:22:28,633 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:22:30,118 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:22:30,118 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:22:30,118 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:22:39,473 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:22:40,917 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:22:40,917 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:22:40,917 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:22:50,093 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 10:22:50,698 - INFO - Connection to the database was successful.
+2024-09-03 10:22:50,732 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 10:22:53,180 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:22:54,689 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:22:54,698 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:22:54,698 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:23:07,313 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 10:23:07,751 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 10:23:47,649 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:23:47,673 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:23:47,738 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:23:47,738 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:23:49,107 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:23:49,107 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:23:49,107 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:23:49,107 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:23:49,107 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:23:49,116 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:23:49,132 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:23:49,132 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:23:49,132 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:23:49,164 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:23:49,164 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:23:49,172 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:24:02,299 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 10:24:02,299 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 10:24:51,555 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 10:24:52,025 - INFO - Connection to the database was successful.
+2024-09-03 10:24:52,073 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 10:25:11,991 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 10:25:12,434 - INFO - Connection to the database was successful.
+2024-09-03 10:25:12,467 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 10:25:22,126 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:25:23,585 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:25:23,585 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:25:35,585 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 10:25:35,847 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 10:26:19,399 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:26:30,482 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:26:32,401 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-03 10:26:53,713 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 10:26:53,981 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 10:28:03,181 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 10:28:03,465 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 10:28:12,465 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 10:28:13,057 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 10:31:37,164 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 10:31:37,739 - INFO - Connection to the database was successful.
+2024-09-03 10:31:37,749 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 10:31:48,871 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 10:31:48,872 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 10:31:54,476 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 10:31:55,098 - INFO - Connection to the database was successful.
+2024-09-03 10:31:55,112 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 10:32:04,412 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:32:06,702 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-03 10:32:26,291 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 10:32:26,606 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 10:39:17,654 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 10:39:17,822 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 500 542
+2024-09-03 10:40:52,127 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:40:54,623 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:40:54,625 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:40:54,625 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:41:01,113 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:41:03,121 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:41:03,123 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:41:03,124 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:41:35,423 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 10:41:35,423 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 10:41:38,140 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 10:41:39,062 - INFO - Connection to the database was successful.
+2024-09-03 10:41:39,077 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 10:41:43,236 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:41:45,071 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 10:41:45,072 - ERROR - Server error: The request could not be processed.
+2024-09-03 10:41:45,073 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 10:42:51,844 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 10:42:52,999 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-03 11:27:12,254 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 11:27:15,238 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 11:27:15,241 - ERROR - Server error: The request could not be processed.
+2024-09-03 11:27:15,243 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 11:27:22,617 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 11:27:22,979 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 11:27:33,273 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 11:27:33,445 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 11:57:28,794 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 11:57:29,118 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 11:57:37,073 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 11:57:37,374 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 12:24:03,846 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 12:24:06,650 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 12:24:06,650 - ERROR - Server error: The request could not be processed.
+2024-09-03 12:24:06,652 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 12:24:10,239 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 12:24:10,493 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 12:24:23,670 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 12:24:23,670 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-03 12:24:28,445 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-03 12:24:28,898 - INFO - Connection to the database was successful.
+2024-09-03 12:24:28,916 - INFO - Serving on http://192.168.1.158:9099
+2024-09-03 12:29:36,419 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 12:29:38,022 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 12:29:38,024 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-03 12:29:38,025 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 12:29:39,052 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 12:29:39,264 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 12:29:45,411 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 12:29:45,611 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 12:33:37,560 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 12:33:37,617 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 12:33:37,992 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 12:33:39,226 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 12:33:39,228 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-03 12:33:39,229 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 12:34:54,589 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 12:34:55,986 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 12:34:56,165 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 12:34:56,168 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-03 12:34:56,170 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 12:34:56,183 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 12:35:30,040 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-03 12:35:31,514 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-03 12:35:31,521 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-03 12:35:31,523 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 12:35:31,525 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-03 12:35:31,753 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-03 12:38:22,528 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-03 12:38:22,692 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 500 542
+2024-09-03 12:43:18,633 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-03 12:43:18,633 - INFO - [33mPress CTRL+C to quit[0m

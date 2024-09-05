@@ -10,6 +10,9 @@ import base64
 from cryptography.hazmat.primitives import padding
 import logging
 from logging.handlers import RotatingFileHandler
+import zeep
+from zeep import Client
+
 
 
 log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
@@ -94,14 +97,15 @@ conn = connect_to_database(
     user='USR160420145114',
     password='PSSJi26Py57',
     database='DB160420145114',
-    as_dict=True
+    #as_dict=True
 )
 
 
 
 app = Flask(__name__)
 # CORS(app)
-CORS(app, resources={r"/*": {"origins": "http://localhost:8080"}})
+CORS(app, resources={r"/*": {"origins": ["http://192.168.1.110:8091","http://192.168.1.110:8080"]}})
+
 
 
 @app.route('/')
@@ -279,6 +283,13 @@ def insert():
 ## tuğçeeeeeee
 
 
+import requests
+import logging
+
+# Logger yapılandırması
+logging.basicConfig(level=logging.ERROR)
+logger = logging.getLogger(__name__)
+
 def facematch(person_idnum, cam_data):
     url = 'http://herenbas.com/sfapi/FaceMatch'
     data = {
@@ -290,45 +301,63 @@ def facematch(person_idnum, cam_data):
         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3MjQyNDY5NjAsImV4cCI6MTcyOTQzMDk2MCwiaXNzIjoiS29kZGEgWWF6xLFsxLFtICIsImF1ZCI6Ind3dy5oZXJlbmJhcy5jb20ifQ.6nvzdq_gvP35VUW-JTtZjowXjbYr5aesSeXGPXi88OY'
     }
 
-    response = requests.post(url, headers=headers, data=data)
+    try:
+        response = requests.post(url, headers=headers, data=data)
+        response.raise_for_status()  # HTTP hataları için exception fırlatır
 
-    if response.status_code == 500:
-        # Sunucu hatası: Yanıt alırken sunucu tarafında bir sorun oluştu.
-        logger.error("Server error: The request could not be processed.")
-        print("Server error: The request could not be processed due to an internal server error.")
-        return {"error": "Server error: The request could not be processed."}, 500
+        if response.status_code == 200:
+            try:
+                response_json = response.json()
+            except ValueError:
+                # Yanıt JSON formatında değilse
+                logger.error("Response is not in JSON format.")
+                print("Response is not in JSON format.")
+                return {"error": "Response is not in JSON format."}, 500
 
-    elif response.status_code == 401:
-        # Yetkilendirme hatası: API'ye erişim için geçersiz veya eksik kimlik doğrulama bilgisi.
-        logger.error("Authorization error: Please check your authentication credentials.")
-        print("Authorization error: Invalid or missing authentication credentials.")
-        return {"error": "Authorization error: Please check your authentication credentials."}, 401
+            formatted_response = {
+                "id": response_json.get("id", "N/A"),
+                "isim": response_json.get("isim", ""),
+                "skor": response_json.get("skor", "0.0"),
+                "eslesmeSonucu": "True" if response_json.get("eslesmeSonucu") else "False"
+            }
 
-    elif response.status_code == 404:
-        # Bulunamadı: İstenen kaynak bulunamadı.
-        logger.error("Not found: The requested resource could not be found.")
-        print("Not found: The requested resource could not be found.")
-        return {"error": "Not found: The requested resource could not be found."}, 404
+            return formatted_response
 
-    elif response.status_code == 200:
-        # Başarılı istek: Yanıt başarılı şekilde alındı.
-        response_json = response.json()
-        print(response_json)
+        elif response.status_code == 500:
+            # Sunucu hatası
+            logger.error("Server error: The request could not be processed.")
+            print("Server error: The request could not be processed due to an internal server error.")
+            return {"error": "Server error: The request could not be processed."}, 500
 
-        formatted_response = {
-            "id": response_json.get("id", "N/A"),
-            "isim": response_json.get("isim", ""),
-            "skor": response_json.get("skor", "0.0"),
-            "eslesmeSonucu": "True" if response_json.get("match") else "False"
-        }
+        elif response.status_code == 401:
+            # Yetkilendirme hatası
+            logger.error("Authorization error: Please check your authentication credentials.")
+            print("Authorization error: Invalid or missing authentication credentials.")
+            return {"error": "Authorization error: Please check your authentication credentials."}, 401
 
-        return formatted_response
+        elif response.status_code == 404:
+            # Bulunamadı
+            logger.error("Not found: The requested resource could not be found.")
+            print("Not found: The requested resource could not be found.")
+            return {"error": "Not found: The requested resource could not be found."}, 404
 
-    else:
-        # Diğer durumlar için genel bir hata mesajı
-        logger.error(f"Unexpected error: Status code {response.status_code}")
-        print(f"Unexpected error: Status code {response.status_code}")
-        return {"error": f"Unexpected error: Status code {response.status_code}"}, response.status_code
+        else:
+            # Diğer durumlar için genel bir hata mesajı
+            logger.error(f"Unexpected error: Status code {response.status_code}")
+            print(f"Unexpected error: Status code {response.status_code}")
+            return {"error": f"Unexpected error: Status code {response.status_code}"}, response.status_code
+
+    except requests.RequestException as req_err:
+        # HTTP isteği hatalarını yakala
+        logger.error(f"HTTP request error: {req_err}")
+        print(f"HTTP request error: {req_err}")
+        return {"error": f"HTTP request error: {req_err}"}, 500
+    except Exception as err:
+        # Beklenmedik diğer hataları yakala
+        logger.error(f"Unexpected error: {err}")
+        print(f"Unexpected error: {err}")
+        return {"error": f"Unexpected error: {err}"}, 500
+
 
 
 @app.route('/read', methods=['POST'])
@@ -527,7 +556,56 @@ def delete():
         return jsonify({"error": str(e)}), 500
 
 
+@app.route('/soap_request', methods=['POST'])
+def soup_request():
+    # İstekten verileri al
+    tc_no = request.form.get('TCKimlikNo')
+    ad = request.form.get('Ad')
+    soyad = request.form.get('Soyad')
+    dogum_yili = request.form.get('DogumYili')
+
+    # Web servisi URL'si
+    url = 'https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx'
+
+    # SOAP isteği XML formatında
+    soap_request = f'''<?xml version="1.0" encoding="utf-8"?>
+    <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="http://tckimlik.nvi.gov.tr/WS">
+       <soap:Header/>
+       <soap:Body>
+          <ws:TCKimlikNoDogrula>
+             <ws:TCKimlikNo>{tc_no}</ws:TCKimlikNo>
+             <ws:Ad>{ad}</ws:Ad>
+             <ws:Soyad>{soyad}</ws:Soyad>
+             <ws:DogumYili>{dogum_yili}</ws:DogumYili>
+          </ws:TCKimlikNoDogrula>
+       </soap:Body>
+    </soap:Envelope>'''
+
+    # SOAP isteği gönderme
+    headers = {
+        'Content-Type': 'application/soap+xml; charset=utf-8',  # Content-Type başlığını SOAP 1.2'ye göre ayarlayın
+        'SOAPAction': 'http://tckimlik.nvi.gov.tr/WS/TCKimlikNoDogrula'
+        # SOAPAction, genellikle web servisi dokümantasyonunda bulunur
+    }
+    response = requests.post(url, data=soap_request, headers=headers)
+
+    # Yanıtı kontrol etme
+    response_text = response.text
+    if 'TCKimlikNoDogrulaResult>true</TCKimlikNoDogrulaResult>' in response_text:
+        result = True
+    else:
+        result = False
+
+    return jsonify({'result': result})
+
+
+'''if __name__ == '__main__':
+    app.run(debug=True)
+
 if __name__ == '__main__':
-    app.run("0.0.0.0", 9099)
+    app.run("0.0.0.0", 9099)'''
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=9099)
 
 serve(app, host='192.168.1.158', port='9099', threads=5)
