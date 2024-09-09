@@ -964,3 +964,273 @@ TypeError: soup_request() missing 4 required positional arguments: 'tc_no', 'ad'
 2024-09-05 11:06:06,387 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 500 542
 2024-09-05 11:06:19,563 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
 2024-09-05 11:06:19,714 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 500 542
+2024-09-05 16:36:37,249 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-05 16:36:53,741 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 500 542
+2024-09-05 17:08:29,605 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-05 17:08:29,606 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-06 16:23:53,627 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-06 16:23:54,243 - INFO - Connection to the database was successful.
+2024-09-06 16:23:54,261 - INFO - Serving on http://192.168.1.158:9099
+2024-09-06 16:28:32,896 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:28:39,618 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-06 16:28:39,620 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-06 16:28:39,624 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-06 16:31:53,833 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-06 16:31:54,382 - INFO - Connection to the database was successful.
+2024-09-06 16:31:54,396 - INFO - Serving on http://192.168.1.158:9099
+2024-09-06 16:32:03,881 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:32:05,338 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-06 16:32:05,339 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-06 16:32:05,340 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-06 16:33:23,004 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-06 16:33:23,773 - INFO - Connection to the database was successful.
+2024-09-06 16:33:23,804 - INFO - Serving on http://192.168.1.158:9099
+2024-09-06 16:33:33,643 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:33:35,135 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-06 16:33:35,143 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-06 16:33:35,145 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-06 16:35:03,966 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:35:05,358 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-06 16:35:10,473 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-06 16:35:55,250 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-06 16:36:00,207 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:36:01,881 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-06 16:36:05,026 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-06 16:36:25,257 - DEBUG - Encoding detection on empty bytes, assuming utf_8 intention.
+2024-09-06 16:37:12,255 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-06 16:38:30,349 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:38:31,901 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-06 16:38:40,756 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-06 16:38:40,762 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-06 16:38:49,470 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:38:51,168 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-06 16:40:29,326 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:40:31,303 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-06 16:40:47,056 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-06 16:40:47,056 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-06 16:40:47,058 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-06 16:40:47,059 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-06 16:40:47,088 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-06 16:40:47,088 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-06 16:41:48,667 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-06 16:41:49,133 - INFO - Connection to the database was successful.
+2024-09-06 16:41:49,184 - INFO - Serving on http://192.168.1.158:9099
+2024-09-06 16:41:53,514 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:41:54,965 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-06 16:42:03,785 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-06 16:42:39,856 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-06 16:42:40,345 - INFO - Connection to the database was successful.
+2024-09-06 16:42:40,385 - INFO - Serving on http://192.168.1.158:9099
+2024-09-06 16:42:42,740 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:42:44,222 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-06 16:42:48,560 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-06 16:42:48,567 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-06 16:45:31,170 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-06 16:45:31,170 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-06 16:46:00,456 - INFO - Trying to connect to the database with IP: 94.73.170.99
+2024-09-06 16:46:21,540 - ERROR - OperationalError: Could not connect to the database. Error: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+Traceback (most recent call last):
+  File "src\\pymssql\\_pymssql.pyx", line 650, in pymssql._pymssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 2155, in pymssql._mssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 712, in pymssql._mssql.MSSQLConnection.__init__
+  File "src\\pymssql\\_mssql.pyx", line 1881, in pymssql._mssql.maybe_raise_MSSQLDatabaseException
+  File "src\\pymssql\\_mssql.pyx", line 1898, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\90551\Documents\GitHub\faceapi\app.py", line 66, in connect_to_database
+    conn = pymssql.connect(
+  File "src\\pymssql\\_pymssql.pyx", line 659, in pymssql._pymssql.connect
+pymssql.exceptions.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+2024-09-06 16:46:21,570 - INFO - Serving on http://192.168.1.158:9099
+2024-09-06 16:46:26,542 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:46:28,070 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-06 16:46:36,998 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-06 16:46:45,457 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-06 16:47:42,377 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:47:43,952 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-06 16:47:48,812 - ERROR - HTTP request error: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-06 16:47:48,812 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-06 16:49:36,141 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:49:38,121 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-06 16:49:38,129 - ERROR - Genel hata: 'NoneType' object has no attribute 'cursor'
+2024-09-06 16:50:02,659 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:50:03,726 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-06 16:50:03,731 - ERROR - Genel hata: 'NoneType' object has no attribute 'cursor'
+2024-09-06 16:50:33,987 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-06 16:50:33,987 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-06 16:51:15,715 - INFO - Trying to connect to the database with IP: 94.73.170.99
+2024-09-06 16:51:36,788 - ERROR - OperationalError: Could not connect to the database. Error: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+Traceback (most recent call last):
+  File "src\\pymssql\\_pymssql.pyx", line 650, in pymssql._pymssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 2155, in pymssql._mssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 712, in pymssql._mssql.MSSQLConnection.__init__
+  File "src\\pymssql\\_mssql.pyx", line 1881, in pymssql._mssql.maybe_raise_MSSQLDatabaseException
+  File "src\\pymssql\\_mssql.pyx", line 1898, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\90551\Documents\GitHub\faceapi\app.py", line 66, in connect_to_database
+    conn = pymssql.connect(
+  File "src\\pymssql\\_pymssql.pyx", line 659, in pymssql._pymssql.connect
+pymssql.exceptions.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+2024-09-06 16:51:36,828 - INFO - Serving on http://192.168.1.158:9099
+2024-09-06 16:52:17,231 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-06 16:52:17,231 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-06 16:54:13,328 - INFO - Trying to connect to the database with IP: 94.73.170.99
+2024-09-06 16:54:49,070 - ERROR - OperationalError: Could not connect to the database. Error: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+Traceback (most recent call last):
+  File "src\\pymssql\\_pymssql.pyx", line 650, in pymssql._pymssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 2155, in pymssql._mssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 712, in pymssql._mssql.MSSQLConnection.__init__
+  File "src\\pymssql\\_mssql.pyx", line 1881, in pymssql._mssql.maybe_raise_MSSQLDatabaseException
+  File "src\\pymssql\\_mssql.pyx", line 1898, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\90551\Documents\GitHub\faceapi\app.py", line 66, in connect_to_database
+    conn = pymssql.connect(
+  File "src\\pymssql\\_pymssql.pyx", line 659, in pymssql._pymssql.connect
+pymssql.exceptions.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+2024-09-06 16:55:43,038 - INFO - Serving on http://192.168.1.158:9099
+2024-09-06 16:57:20,397 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 16:57:23,136 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-06 16:57:23,136 - ERROR - Genel hata: 'NoneType' object has no attribute 'cursor'
+2024-09-06 16:58:48,552 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-06 16:58:49,001 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-06 16:59:31,627 - INFO - Trying to connect to the database with IP: 94.73.170.99
+2024-09-06 16:59:58,428 - ERROR - OperationalError: Could not connect to the database. Error: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+Traceback (most recent call last):
+  File "src\\pymssql\\_pymssql.pyx", line 650, in pymssql._pymssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 2155, in pymssql._mssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 712, in pymssql._mssql.MSSQLConnection.__init__
+  File "src\\pymssql\\_mssql.pyx", line 1881, in pymssql._mssql.maybe_raise_MSSQLDatabaseException
+  File "src\\pymssql\\_mssql.pyx", line 1898, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\90551\Documents\GitHub\faceapi\app.py", line 66, in connect_to_database
+    conn = pymssql.connect(
+  File "src\\pymssql\\_pymssql.pyx", line 659, in pymssql._pymssql.connect
+pymssql.exceptions.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+2024-09-06 17:03:47,486 - INFO - Trying to connect to the database with IP: 94.73.170.99
+2024-09-06 17:04:26,510 - ERROR - OperationalError: Could not connect to the database. Error: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+Traceback (most recent call last):
+  File "src\\pymssql\\_pymssql.pyx", line 650, in pymssql._pymssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 2155, in pymssql._mssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 712, in pymssql._mssql.MSSQLConnection.__init__
+  File "src\\pymssql\\_mssql.pyx", line 1881, in pymssql._mssql.maybe_raise_MSSQLDatabaseException
+  File "src\\pymssql\\_mssql.pyx", line 1898, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\90551\Documents\GitHub\faceapi\app.py", line 66, in connect_to_database
+    conn = pymssql.connect(
+  File "src\\pymssql\\_pymssql.pyx", line 659, in pymssql._pymssql.connect
+pymssql.exceptions.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+2024-09-06 17:04:42,321 - INFO - Trying to connect to the database with IP: 94.73.170.99
+2024-09-06 17:05:14,731 - ERROR - OperationalError: Could not connect to the database. Error: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+Traceback (most recent call last):
+  File "src\\pymssql\\_pymssql.pyx", line 650, in pymssql._pymssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 2155, in pymssql._mssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 712, in pymssql._mssql.MSSQLConnection.__init__
+  File "src\\pymssql\\_mssql.pyx", line 1881, in pymssql._mssql.maybe_raise_MSSQLDatabaseException
+  File "src\\pymssql\\_mssql.pyx", line 1898, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\90551\Documents\GitHub\faceapi\app.py", line 66, in connect_to_database
+    conn = pymssql.connect(
+  File "src\\pymssql\\_pymssql.pyx", line 659, in pymssql._pymssql.connect
+pymssql.exceptions.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+2024-09-06 17:10:56,919 - INFO - Trying to connect to the database with IP: 94.73.170.99
+2024-09-06 17:11:33,899 - ERROR - OperationalError: Could not connect to the database. Error: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+Traceback (most recent call last):
+  File "src\\pymssql\\_pymssql.pyx", line 650, in pymssql._pymssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 2155, in pymssql._mssql.connect
+  File "src\\pymssql\\_mssql.pyx", line 712, in pymssql._mssql.MSSQLConnection.__init__
+  File "src\\pymssql\\_mssql.pyx", line 1881, in pymssql._mssql.maybe_raise_MSSQLDatabaseException
+  File "src\\pymssql\\_mssql.pyx", line 1898, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\90551\Documents\GitHub\faceapi\app.py", line 66, in connect_to_database
+    conn = pymssql.connect(
+  File "src\\pymssql\\_pymssql.pyx", line 659, in pymssql._pymssql.connect
+pymssql.exceptions.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (94.73.170.99)\nNet-Lib error during Unknown error (10060)\n')
+2024-09-06 17:13:07,715 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-06 17:13:08,214 - INFO - Connection to the database was successful.
+2024-09-06 17:13:08,234 - INFO - Serving on http://192.168.1.158:9099
+2024-09-06 17:13:19,134 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 17:13:21,923 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-06 17:13:36,772 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-06 17:13:37,058 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-06 17:33:57,585 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-06 17:34:00,261 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 200 None
+2024-09-06 17:43:10,047 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-06 17:43:10,048 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-09 14:25:33,880 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-09 14:25:34,539 - INFO - Connection to the database was successful.
+2024-09-09 14:25:34,566 - INFO - Serving on http://192.168.1.158:9099
+2024-09-09 14:25:37,428 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-09 14:25:44,271 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-09 14:25:44,286 - ERROR - HTTP hatasý: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-09 14:25:44,295 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-09 14:26:01,207 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-09 14:26:02,685 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-09 14:26:02,686 - ERROR - HTTP hatasý: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-09 14:26:02,687 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-09 14:28:57,993 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-09 14:28:59,430 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-09 14:28:59,432 - ERROR - HTTP hatasý: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-09 14:28:59,434 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-09 14:29:26,463 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-09 14:29:26,826 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392
+2024-09-09 14:33:27,182 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-09 14:33:28,748 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-09 14:33:28,749 - ERROR - HTTP hatasý: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-09 14:33:28,751 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-09 14:33:47,119 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-09 14:33:48,616 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-09 14:33:48,617 - ERROR - HTTP hatasý: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-09 14:33:48,618 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-09 14:36:33,344 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-09 14:36:33,345 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-09 14:36:40,394 - INFO - Trying to connect to the database with IP: 94.73.170.9
+2024-09-09 14:36:41,115 - INFO - Connection to the database was successful.
+2024-09-09 14:36:41,133 - INFO - Serving on http://192.168.1.158:9099
+2024-09-09 14:38:20,423 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-09 14:38:21,923 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-09 14:38:21,926 - ERROR - HTTP hatasý: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-09 14:38:21,927 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-09 14:38:47,473 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-09 14:38:48,957 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-09 14:38:48,959 - ERROR - HTTP hatasý: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-09 14:38:48,960 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-09 14:40:36,324 - DEBUG - Starting new HTTP connection (1): herenbas.com:80
+2024-09-09 14:40:37,810 - DEBUG - http://herenbas.com:80 "POST /sfapi/FaceMatch HTTP/11" 500 0
+2024-09-09 14:40:37,812 - ERROR - HTTP hatasý: 500 Server Error: Internal Server Error for url: http://herenbas.com/sfapi/FaceMatch
+2024-09-09 14:40:37,813 - ERROR - Genel hata: tuple indices must be integers or slices, not str
+2024-09-09 14:41:49,920 - DEBUG - Starting new HTTPS connection (1): tckimlik.nvi.gov.tr:443
+2024-09-09 14:41:50,179 - DEBUG - https://tckimlik.nvi.gov.tr:443 "POST /Service/KPSPublic.asmx HTTP/11" 200 392

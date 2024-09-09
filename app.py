@@ -10,8 +10,8 @@ import base64
 from cryptography.hazmat.primitives import padding
 import logging
 from logging.handlers import RotatingFileHandler
-import zeep
-from zeep import Client
+
+
 
 
 
@@ -76,6 +76,7 @@ def connect_to_database(server, user, password, database):
 
     except pymssql.OperationalError as e:
         logger.error(f'OperationalError: Could not connect to the database. Error: {str(e)}', exc_info=True)
+        return jsonify("Could not connect to the database.")
     except Exception as e:
         logger.error(f'An unexpected error occurred: {str(e)}', exc_info=True)
 
@@ -181,7 +182,6 @@ def register():
 @app.route('/insert', methods=['POST'])
 def insert():
     try:
-        # Şifreli verileri alın
         encrypted_name = request.form['Ad']
         encrypted_surname = request.form['Soyad']
         encrypted_person_idnum = request.form['TCKN']
@@ -198,9 +198,6 @@ def insert():
         encrypted_image = request.form['IMAGE']
         encrypted_cam_data = request.form['Cam_Data']
 
-
-
-        # Verileri deşifre edin
         name = decrypt_aes(encrypted_name)
         surname = decrypt_aes(encrypted_surname)
         person_idnum = decrypt_aes(encrypted_person_idnum)
@@ -217,74 +214,56 @@ def insert():
         image = decrypt_aes(encrypted_image)
         cam_data = decrypt_aes(encrypted_cam_data)
 
-
         if not name or not surname or not birthday or not birthloc or not gender:
             return jsonify({"error": "Gerekli bilgiler eksik"}), 400
 
         facematch_response = facematch(person_idnum, cam_data)
 
+        if not facematch_response:
+            logger.error("Facematch API yanıtı alınamadı.")
+            return jsonify({"error": "Facematch API yanıtı alınamadı."}), 500
+
         eslesme_sonucu = facematch_response["eslesmeSonucu"]
         skor = facematch_response["skor"]
         facematch_id = facematch_response["id"]
 
-
         cursor = conn.cursor()
 
         try:
-
-
             SQL_QUERY = """INSERT INTO KimlikBilgisi 
                        (Ad, Soyad, TCKN, Dogum_Tarihi, Belge_Numarasi, Dogum_Yeri, Son_Kullanim_Tarihi, 
-                       Cinsiyet, Uyruk, Other_names, NOH, POB, Adres, IMAGE, Cam_Data,DB_ID) 
-                       VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s)"""
-
+                       Cinsiyet, Uyruk, Other_names, NOH, POB, Adres, IMAGE, Cam_Data, DB_ID) 
+                       VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
 
             cursor.execute(SQL_QUERY, (encrypted_name, encrypted_surname, encrypted_person_idnum,
-                                       encrypted_birthday, encrypted_doc_num, encrypted_birthloc, encrypted_expiration_date,
-                                   encrypted_gender, encrypted_nation, encrypted_other_names, encrypted_noh, encrypted_pob,
-                                       encrypted_address, encrypted_image, encrypted_cam_data,facematch_id))
+                                       encrypted_birthday, encrypted_doc_num, encrypted_birthloc,
+                                       encrypted_expiration_date, encrypted_gender, encrypted_nation,
+                                       encrypted_other_names, encrypted_noh, encrypted_pob, encrypted_address,
+                                       encrypted_image, encrypted_cam_data, facematch_id))
             conn.commit()
-
-            print("Record successfully inserted into the database.")
 
             SQL_INSERT_SONUC = """INSERT INTO Sonuc 
-                                              (id, isim, skor, eslesmeSonucu) 
-                                              VALUES (%s, %s, %s, %s)"""
+                                  (id, isim, skor, eslesmeSonucu) 
+                                  VALUES (%s, %s, %s, %s)"""
 
-            cursor.execute(SQL_INSERT_SONUC, (facematch_id, name, skor, eslesme_sonucu,))
-
+            cursor.execute(SQL_INSERT_SONUC, (facematch_id, name, skor, eslesme_sonucu))
             conn.commit()
 
-
         except Exception as e:
-            # Hata durumunda işlemi geri al
             conn.rollback()
             logger.error(f"Veritabanı hata: {str(e)}")
             return jsonify({"error": f"Veritabanına eklenemedi: {str(e)}"}), 500
-            raise e
 
-
-
-        except Exception as e:
-            logger.error(f"Genel hata: {str(e)}")
-            print(f"Bir hata oluştu,facematch api çalışmıyor olabilir.: {str(e)}")
-            return jsonify({"error,facematch api çalışmıyor olabilir": str(e)}), 500
-
-        #return jsonify({"message": "Kayıt başarıyla eklendi!"})
         return facematch_response
-
 
     except Exception as e:
         logger.error(f"Genel hata: {str(e)}")
-        print(f"Error occurred: {str(e)}")
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error": f"Beklenmeyen hata,facematch bağlantısı olmayabilir.: {str(e)}"}), 500
 
 
 ## tuğçeeeeeee
 
 
-import requests
-import logging
 
 # Logger yapılandırması
 logging.basicConfig(level=logging.ERROR)
@@ -303,60 +282,33 @@ def facematch(person_idnum, cam_data):
 
     try:
         response = requests.post(url, headers=headers, data=data)
-        response.raise_for_status()  # HTTP hataları için exception fırlatır
+        response.raise_for_status()
 
-        if response.status_code == 200:
-            try:
-                response_json = response.json()
-            except ValueError:
-                # Yanıt JSON formatında değilse
-                logger.error("Response is not in JSON format.")
-                print("Response is not in JSON format.")
-                return {"error": "Response is not in JSON format."}, 500
+        # HTTP 200 başarılı ise, yanıtı işlemeye başla
+        response_json = response.json()
+        formatted_response = {
+            "id": response_json.get("id", "N/A"),
+            "isim": response_json.get("isim", ""),
+            "skor": response_json.get("skor", "0.0"),
+            "eslesmeSonucu": "True" if response_json.get("eslesmeSonucu") else "False"
+        }
+        return formatted_response
 
-            formatted_response = {
-                "id": response_json.get("id", "N/A"),
-                "isim": response_json.get("isim", ""),
-                "skor": response_json.get("skor", "0.0"),
-                "eslesmeSonucu": "True" if response_json.get("eslesmeSonucu") else "False"
-            }
+    except ValueError:
+        logger.error("Yanıt JSON formatında değil.")
+        return jsonify({"error": "Yanıt JSON formatında değil."}), 500
 
-            return formatted_response
-
-        elif response.status_code == 500:
-            # Sunucu hatası
-            logger.error("Server error: The request could not be processed.")
-            print("Server error: The request could not be processed due to an internal server error.")
-            return jsonify({"error": "Server error: The request could not be processed."}) , 500
-
-        elif response.status_code == 401:
-            # Yetkilendirme hatası
-            logger.error("Authorization error: Please check your authentication credentials.")
-            print("Authorization error: Invalid or missing authentication credentials.")
-            return jsonify({"error": "Authorization error: Please check your authentication credentials."}), 401
-
-        elif response.status_code == 404:
-            # Bulunamadı
-            logger.error("Not found: The requested resource could not be found.")
-            print("Not found: The requested resource could not be found.")
-            return jsonify({"error": "Not found: The requested resource could not be found."}), 404
-
-        else:
-            # Diğer durumlar için genel bir hata mesajı
-            logger.error(f"Unexpected error: Status code {response.status_code}")
-            print(f"Unexpected error: Status code {response.status_code}")
-            return jsonify({"error": f"Unexpected error: Status code {response.status_code}"}) , response.status_code
+    except requests.HTTPError as http_err:
+        logger.error(f"HTTP hatası: {http_err}")
+        return jsonify({"error": f"HTTP hatası: {http_err}"}), response.status_code
 
     except requests.RequestException as req_err:
-        # HTTP isteği hatalarını yakala
-        logger.error(f"HTTP request error: {req_err}")
-        print(f"HTTP request error: {req_err}")
-        return jsonify({"error": f"HTTP request error: {req_err}"}), 500
+        logger.error(f"HTTP isteği hatası: {req_err}")
+        return jsonify({"error": f"HTTP isteği hatası: {req_err}"}), 500
+
     except Exception as err:
-        # Beklenmedik diğer hataları yakala
-        logger.error(f"Unexpected error: {err}")
-        print(f"Unexpected error: {err}")
-        return jsonify({"error": f"Unexpected error: {err}"}), 500
+        logger.error(f"Beklenmedik hata: {err}")
+        return jsonify({"error": f"Beklenmedik hata: {err}"}), 500
 
 
 
@@ -621,12 +573,6 @@ def soap_request():
         return jsonify({'error': "SOAP REQUEST!Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin."}), 500
 
 
-
-'''if __name__ == '__main__':
-    app.run(debug=True)
-
-if __name__ == '__main__':
-    app.run("0.0.0.0", 9099)'''
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=9099)
